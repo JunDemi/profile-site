@@ -1,7 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 /*reset*/
 html,
 body,
@@ -108,7 +104,6 @@ section {
 
 body {
 	line-height: 1;
-	background-color: white;
 }
 
 ol,
