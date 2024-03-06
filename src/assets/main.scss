@@ -1,13 +1,48 @@
 /*     Home     */
 .intro-container{
     height: 100dvh;
-    img{
-        width: 300px;
-        border-radius: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/wyng8khgicujesiregfg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: start;
+    padding-left: 7rem;
+    color: white;
+    div{
+        img{
+            width: 150px;
+            height: 150px;
+             margin: 5rem 0 2rem 0;
+             border-radius: 50%;
+        }
+        h1{
+            font-weight: lighter;
+            font-size: 48px;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 48px;
+        }
+        p{
+            line-height: 30px;
+            font-weight: lighter;
+            font-size: 20px;
+            margin: 2rem 0 5rem 0;
+            width: 600px;
+        }
+        button{
+            cursor: pointer;
+            border: 1.5px solid white;
+            background: none;
+            color: white;
+            padding: 10px 30px;
+            transition: all .2s;
+            &:hover{
+                background-color: rgba(255,255,255,0.1);
+            }
+        }
     }
 }
 .nono{
     height: 100dvh;
 }
-
-//background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/wyng8khgicujesiregfg");
