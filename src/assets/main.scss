@@ -43,6 +43,22 @@
         }
     }
 }
-.nono{
-    height: 100dvh;
+.my-skill{
+    padding: 4rem 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: lighter;
+    h1{
+        color: #696969;
+        font-size: 40px;
+    }
+    p{
+        width: 500px;
+        font-size: 20px;
+        margin-top: 5rem;
+        line-height: 30px;
+    }
+    img{
+        width: 100%;
+    }
 }
