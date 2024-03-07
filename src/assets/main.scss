@@ -1,11 +1,11 @@
 /*     Home     */
+.contact{
+    height: 100dvh;
+}
 .intro-container {
     height: 100dvh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/wyng8khgicujesiregfg");
-    background-size: cover;
-    background-attachment: fixed;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     padding-left: 7rem;
     color: white;
 
@@ -35,29 +35,56 @@
             width: 600px;
         }
 
-        button {
-            cursor: pointer;
-            border: 1.5px solid white;
-            background: none;
-            color: white;
-            padding: 10px 30px;
-            transition: all .2s;
-
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.1);
+        .intro-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 50px;
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                color: #fff;
+                font-size: 13px;
+                font-weight: bold;
+                svg {
+                    fill: #ffffff;
+                    width: 38px;
+                    height: 38px;
+                    transition: all .2s;
+                }
+                span{
+                    transition: all .2s;
+                }
+                &:hover {
+                    svg {
+                        fill: #565656;
+                    }
+                    span{
+                        color: #565656;
+                    }
+                }
+            }
+            hr{
+                border: none;
+                width: 1px;
+                height: 35px;
+                background-color: #fff;
+                margin: 0;
             }
         }
+
     }
 }
 
 .my-skill {
-    margin-top: 1px;
     padding: 5rem 7rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     h1 {
-        color: #696969;
+        color: black;
         font-size: 40px;
 
         font-weight: lighter;
@@ -73,21 +100,20 @@
     .my-skill-list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
 
         div {
             position: relative;
-            z-index: -2;
+            z-index: 1;
             padding: 1rem;
-            font-weight: lighter;
+
             span {
                 position: absolute;
                 background-color: white;
                 padding: 3px 10px;
                 top: -10px;
-                right: 10px;
+                left: 10px;
                 font-size: 14px;
-                z-index: -1;
+                z-index: 2;
             }
 
             img {
@@ -97,29 +123,33 @@
 
         .list-1 {
             border: 1px solid #676767;
+            border-right: none;
             display: flex;
             flex-direction: column;
-            justify-content: start;
-            align-items: start;
+            justify-content: flex-start;
+            align-items: flex-start;
             gap: 5px;
         }
 
         .list-2 {
             border: 1px solid #676767;
+            border-left: none;
             display: flex;
             flex-direction: column;
-            justify-content: start;
-            align-items: start;
+            justify-content: flex-start;
+            align-items: flex-start;
             gap: 5px;
         }
 
         .list-3 {
+            margin-left: 10px;
             border: 1px solid #676767;
             display: flex;
             flex-direction: column;
-            justify-content: start;
-            align-items: start;
+            justify-content: flex-start;
+            align-items: flex-start;
             gap: 5px;
         }
     }
+
 }
