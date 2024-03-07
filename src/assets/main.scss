@@ -1,5 +1,5 @@
 /*     Home     */
-.intro-container{
+.intro-container {
     height: 100dvh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/wyng8khgicujesiregfg");
     background-size: cover;
@@ -8,57 +8,118 @@
     align-items: start;
     padding-left: 7rem;
     color: white;
-    div{
-        img{
+
+    div {
+        img {
             width: 150px;
             height: 150px;
-             margin: 5rem 0 2rem 0;
-             border-radius: 50%;
+            margin: 5rem 0 2rem 0;
+            border-radius: 50%;
         }
-        h1{
+
+        h1 {
             font-weight: lighter;
             font-size: 48px;
         }
-        h2{
+
+        h2 {
             font-weight: bold;
             font-size: 48px;
         }
-        p{
+
+        p {
             line-height: 30px;
             font-weight: lighter;
             font-size: 20px;
             margin: 2rem 0 5rem 0;
             width: 600px;
         }
-        button{
+
+        button {
             cursor: pointer;
             border: 1.5px solid white;
             background: none;
             color: white;
             padding: 10px 30px;
             transition: all .2s;
-            &:hover{
-                background-color: rgba(255,255,255,0.1);
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
             }
         }
     }
 }
-.my-skill{
-    padding: 4rem 7rem;
+
+.my-skill {
+    margin-top: 1px;
+    padding: 5rem 7rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-weight: lighter;
-    h1{
+
+    h1 {
         color: #696969;
         font-size: 40px;
+
+        font-weight: lighter;
     }
-    p{
-        width: 500px;
+
+    p {
+        font-weight: lighter;
         font-size: 20px;
         margin-top: 5rem;
         line-height: 30px;
     }
-    img{
-        width: 100%;
+
+    .my-skill-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+
+        div {
+            position: relative;
+            z-index: -2;
+            padding: 1rem;
+            font-weight: lighter;
+            span {
+                position: absolute;
+                background-color: white;
+                padding: 3px 10px;
+                top: -10px;
+                right: 10px;
+                font-size: 14px;
+                z-index: -1;
+            }
+
+            img {
+                height: 30px;
+            }
+        }
+
+        .list-1 {
+            border: 1px solid #676767;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 5px;
+        }
+
+        .list-2 {
+            border: 1px solid #676767;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 5px;
+        }
+
+        .list-3 {
+            border: 1px solid #676767;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 5px;
+        }
     }
 }
