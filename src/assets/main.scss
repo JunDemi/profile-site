@@ -27,14 +27,46 @@
             font-size: 48px;
         }
 
-        p {
+        .intro-text-container {
             line-height: 30px;
             font-weight: lighter;
             font-size: 20px;
-            margin: 2rem 0 5rem 0;
+            margin: 2rem 0 1rem 0;
             width: 600px;
+            height: 90px;
+            position: relative;
+            p{
+                position: absolute;
+            }
         }
-
+        .intro-text-radio{
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            button{
+                cursor: pointer;
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                padding: 5px;
+                background: none;
+                transition: all .2s;
+            }
+            span{
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 20px;
+                svg{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
         .intro-links {
             display: flex;
             justify-content: flex-start;
@@ -53,18 +85,6 @@
                     fill: #ffffff;
                     width: 38px;
                     height: 38px;
-                    transition: all .2s;
-                }
-                span{
-                    transition: all .2s;
-                }
-                &:hover {
-                    svg {
-                        fill: #565656;
-                    }
-                    span{
-                        color: #565656;
-                    }
                 }
             }
             hr{
