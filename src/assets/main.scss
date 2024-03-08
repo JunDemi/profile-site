@@ -1,7 +1,8 @@
 /*     Home     */
-.contact{
+.contact {
     height: 100dvh;
 }
+
 .intro-container {
     height: 100dvh;
     display: flex;
@@ -35,17 +36,20 @@
             width: 600px;
             height: 90px;
             position: relative;
-            p{
+
+            p {
                 position: absolute;
             }
         }
-        .intro-text-radio{
+
+        .intro-text-radio {
             margin-bottom: 3rem;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
-            button{
+
+            button {
                 cursor: pointer;
                 border: 1px solid white;
                 border-radius: 50%;
@@ -55,23 +59,27 @@
                 background: none;
                 transition: all .2s;
             }
-            span{
+
+            span {
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-left: 20px;
-                svg{
+
+                svg {
                     width: 30px;
                     height: 30px;
                 }
             }
         }
+
         .intro-links {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 50px;
+
             a {
                 display: flex;
                 flex-direction: column;
@@ -81,13 +89,15 @@
                 color: #fff;
                 font-size: 13px;
                 font-weight: bold;
+
                 svg {
                     fill: #ffffff;
                     width: 38px;
                     height: 38px;
                 }
             }
-            hr{
+
+            hr {
                 border: none;
                 width: 1px;
                 height: 35px;
@@ -103,10 +113,9 @@
     padding: 5rem 7rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    h1 {
-        color: black;
-        font-size: 40px;
 
+    h1 {
+        font-size: 40px;
         font-weight: lighter;
     }
 
@@ -172,4 +181,100 @@
         }
     }
 
+}
+
+.portfolio-container {
+    background-color: whitesmoke;
+    padding: 5rem 7rem;
+
+    h1 {
+        font-size: 40px;
+        font-weight: lighter;
+    }
+
+    .portfolio-slider {
+        margin-top: 3rem;
+        position: relative;
+        height: 350px;
+        .portfolio-slide {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 50px;
+            .portfolio-slide-img{
+                width: 600px;
+                height: 350px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: all .2s;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+            }
+            .portfolio-slide-text{
+                font-weight: lighter;
+                h2{
+                    font-size: 24px;
+                }
+                h3{
+                    font-size: 15px;
+                    margin-top: 1rem;
+                }
+                h4{
+                    font-size: 15px;
+                }
+                p{
+                    margin-top: 1rem;
+                    font-size: 15px;
+                }
+                .portfolio-slide-stackImg{
+                    margin: 1rem 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        height: 22px;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+        svg{
+            width: 70px;
+            height: 70px;
+            stroke: #9a9a9a;
+            stroke-width: 1px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: all .2s;
+            &:hover{
+                stroke: #6e6e6e;
+            }
+        }
+        .portfolio-slide-prev{
+            left: -5rem;
+        }
+        .portfolio-slide-next{
+            right: -5rem;
+        }
+    }
+    .portfolio-slide-number{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        color: #9a9a9a;
+        padding: 5px 0 3px 0;
+        border-radius: 30px;
+        width: 70px;
+        background-color: white;
+    }
 }

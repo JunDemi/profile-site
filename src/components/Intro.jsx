@@ -3,23 +3,22 @@ import React, { useEffect, useRef, useState } from "react";
 import { Parallax } from "react-parallax";
 import { introduceText } from "../Utils";
 const boxVar = {
-  //AnimatePresense에 custom을 boolean state값을 적용시켜 isBack이란 변수를 사용
   entry: (isBack) => ({
-    //entry는 n번째 사진을 불러올때. isBack = 현재보다 뒤에 있는 사진일때 현재 사진을 -630만큼 이동 (630은 SNS게시물 컨테이너 넓이를 px값으로 변환한값임)
     x: isBack ? -100 : 100,
+    y: 0,
     opacity: 0,
   }),
   center: {
-    //불러온 사진의 위치는 x: 0
     x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       duration: 0.4,
     },
   },
   hide: (isBack) => ({
-    //현재 있는 사진을 치우고 다른 사진을 불러올때 현재있는 사진의 동작 메소드, 불러올 사진이 현재 사진보다 앞에 있을때 현재 사진을 630만큼 이동
     x: isBack ? 100 : -100,
+    y: -20,
     opacity: 0,
     transition: {
       duration: 0.4,
@@ -44,13 +43,14 @@ const Intro = () => {
   };
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if(!pause){
+      if (!pause) {
         set_currentPage((prevValue) => (prevValue + 1) % 3);
+        set_back(false);
       }
     }, 4000);
-      return () => {
-          clearInterval(intervalId);
-    }
+    return () => {
+      clearInterval(intervalId);
+    };
   }, [pause]);
   return (
     <>
@@ -101,7 +101,12 @@ const Intro = () => {
               )}
             </AnimatePresence>
           </motion.div>
-          <div className="intro-text-radio">
+          <motion.div
+            className="intro-text-radio"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+          >
             {introduceText.map((data, page) => (
               <button
                 key={page}
@@ -140,7 +145,7 @@ const Intro = () => {
                 </svg>
               )}
             </span>
-          </div>
+          </motion.div>
           <motion.div
             className="intro-links"
             initial={{ opacity: 0 }}
@@ -179,9 +184,9 @@ const Intro = () => {
       <div className="my-skill">
         <motion.div
           style={{ width: "500px" }}
-          initial={{ opacity: 0, x: 30 }}
-          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-          transition={{ delay: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+          transition={{ delay: 0.3, ease: "easeOut" }}
         >
           <h1>My Skills</h1>
           <p ref={ref}>
@@ -193,9 +198,9 @@ const Intro = () => {
         </motion.div>
         <motion.div
           className="my-skill-list"
-          initial={{ opacity: 0, x: -30 }}
-          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-          transition={{ delay: 1.0, ease: "easeOut" }}
+          initial={{ opacity: 0, x: 30 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+          transition={{ delay: 0.3, ease: "easeOut" }}
         >
           <div className="list-1">
             <span>Front End</span>
