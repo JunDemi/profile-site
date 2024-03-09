@@ -208,17 +208,35 @@
             gap: 50px;
 
             .portfolio-slide-img {
-                width: 600px;
-                height: 350px;
+                width: 650px;
+                height: 400px;
                 overflow: hidden;
+                position: relative;
+                .macbook-img {
+                    width: 650px;
+                    height: 400px;
+                    z-index: 3;
+                    overflow: hidden;
+                }
+                .macbook-img-slider{
+                    cursor: pointer;
+                    position: absolute;
+                    top: 24px;
+                    left: 75px;
+                    z-index: 2;
+                    div{
+                        position: relative;
+                        width: 100%;
+                        img{
+                            position: absolute;
+                            width: 501px;
+                            height: 325px;
+                        }
+                        button{
+                            position: absolute;
+                            right: 0;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    transition: all .2s;
-
-                    &:hover {
-                        scale: 1.1;
+                        }
                     }
                 }
             }
