@@ -28,24 +28,22 @@ const boxVar = {
 
 const viewVar = {
   entry: {
-    x: 40,
     opacity: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.2,
     },
   },
   center: {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.2,
     },
   },
   hide: {
-    x: -40,
     opacity: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.2,
     },
   },
 };

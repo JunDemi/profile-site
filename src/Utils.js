@@ -8,8 +8,9 @@ export const portfolioList = [
   {
     viewImg: [
       "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/h3qku2lbphxeyjbrtrdj",
-      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/h3qku2lbphxeyjbrtrdj",
-      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/h3qku2lbphxeyjbrtrdj",
+      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/ky1sot3zp5m17wcdcv2o",
+      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/trnsq7dqomyhna2brdck",
+      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/cz1ww2ssm6r6q1gjmtnv"
     ],
     siteName: "The Market",
     siteIntro: "사이트 간단 소개글",
