@@ -195,86 +195,104 @@
     .portfolio-slider {
         margin-top: 3rem;
         position: relative;
-        height: 350px;
+        height: 380px;
+        width: 100%;
+
         .portfolio-slide {
+            z-index: 3;
+            width: 100%;
             position: absolute;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             gap: 50px;
-            .portfolio-slide-img{
+
+            .portfolio-slide-img {
                 width: 600px;
                 height: 350px;
                 overflow: hidden;
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
                     transition: all .2s;
-                    &:hover{
+
+                    &:hover {
                         scale: 1.1;
                     }
                 }
             }
-            .portfolio-slide-text{
-                font-weight: lighter;
-                h2{
+
+            .portfolio-slide-text {
+
+                h2 {
+                    font-weight: bold;
                     font-size: 24px;
                 }
-                h3{
+
+                h3 {
                     font-size: 15px;
                     margin-top: 1rem;
                 }
-                h4{
+
+                h4 {
                     font-size: 15px;
+                    font-weight: bold;
                 }
-                p{
+
+                p {
                     margin-top: 1rem;
                     font-size: 15px;
                 }
-                .portfolio-slide-stackImg{
+
+                .portfolio-slide-stackImg {
                     margin: 1rem 0;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     gap: 10px;
-                    img{
+
+                    img {
                         height: 22px;
                         border-radius: 30px;
                     }
                 }
             }
         }
-        svg{
-            width: 70px;
-            height: 70px;
-            stroke: #9a9a9a;
-            stroke-width: 1px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            transition: all .2s;
-            &:hover{
-                stroke: #6e6e6e;
-            }
-        }
-        .portfolio-slide-prev{
-            left: -5rem;
-        }
-        .portfolio-slide-next{
-            right: -5rem;
-        }
     }
-    .portfolio-slide-number{
-        margin-top: 1rem;
+    .portfolio-slide-number {
+        position: absolute;
+        right: 0;
+        top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 13px;
-        color: #9a9a9a;
+        color: #656565;
         padding: 5px 0 3px 0;
         border-radius: 30px;
         width: 70px;
         background-color: white;
+    }
+    .portfolio-slider-button {
+        position: absolute;
+        z-index: 4;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: #787878;
+        font-size: 13px;
+        gap: 5px;
+        svg {
+            stroke: #787878;
+            width: 30px;
+            height: 30px;
+        }
+        
     }
 }

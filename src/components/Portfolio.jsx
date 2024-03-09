@@ -3,45 +3,35 @@ import React, { useRef, useState } from "react";
 import { portfolioList } from "../Utils";
 
 const boxVar = {
-  entry: (isBack) => ({
-    x: isBack ? -100 : 100,
-    y: 0,
+  entry: {
+    x: 40,
     opacity: 0,
-  }),
-  center: {
-    x: 0,
-    y: 0,
-    opacity: 1,
     transition: {
-      duration: 0.4,
+      duration: 0.6,
     },
   },
-  hide: (isBack) => ({
-    x: isBack ? 100 : -100,
-    y: -20,
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
+  hide: {
+    x: -40,
     opacity: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.6,
     },
-  }),
+  },
 };
 const Portfolio = () => {
   const ref2 = useRef(null);
   const inview = useInView(ref2, { once: true });
   const [currentPage, set_currentPage] = useState(0);
-  const [back, set_back] = useState(false);
   const nextCard = (imgLength) => {
     //다음 버튼 클릭
-    set_currentPage((prev) =>
-      prev === imgLength - 1 ? 0 : prev + 1
-    ); //다음 숫자로 변경하여 페이지 넘김. 가장 끝일 경우 동작하지 않도록, 개수는 0부터 시작하지 않으므르 -1
-
-    set_back(false);
-  };
-  const prevCard = () => {
-    //이전 버튼 클릭
-    set_currentPage((prev) => (prev === 0 ? portfolioList.length -1 : prev - 1)); //이전 숫자로 변경하여 페이지 넘김. 0일 경우 동작하지 않도록
-    set_back(true);
+    set_currentPage((prev) => (prev === imgLength - 1 ? 0 : prev + 1)); //다음 숫자로 변경하여 페이지 넘김. 가장 끝일 경우 동작하지 않도록, 개수는 0부터 시작하지 않으므르 -1
   };
   return (
     <div className="portfolio-container">
@@ -59,14 +49,13 @@ const Portfolio = () => {
         animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
         transition={{ delay: 0.6, ease: "easeOut" }}
       >
-        <AnimatePresence mode="sync" custom={back}>
+        <AnimatePresence mode="sync">
           {portfolioList.map(
             (data, page) =>
               page === currentPage && (
                 <motion.div
                   className="portfolio-slide"
                   key={page}
-                  custom={back}
                   variants={boxVar}
                   initial="entry"
                   animate="center"
@@ -92,36 +81,30 @@ const Portfolio = () => {
               )
           )}
         </AnimatePresence>
-        <svg
-        className="portfolio-slide-prev"
-          onClick={prevCard}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15.75 19.5 8.25 12l7.5-7.5"
-          />
-        </svg>
-        <svg
-        className="portfolio-slide-next"
+        <div className="portfolio-slide-number">
+          {currentPage + 1} / {portfolioList.length}
+        </div>
+        <div
+          className="portfolio-slider-button"
           onClick={() => nextCard(portfolioList.length)}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-          />
-        </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
+            </svg>
+         
+          Next
+        </div>
       </motion.div>
-      <div className="portfolio-slide-number">
-        {currentPage + 1} / {portfolioList.length}
-      </div>
     </div>
   );
 };

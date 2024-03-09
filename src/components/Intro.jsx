@@ -4,24 +4,30 @@ import { Parallax } from "react-parallax";
 import { introduceText } from "../Utils";
 const boxVar = {
   entry: (isBack) => ({
-    x: isBack ? -100 : 100,
-    y: 0,
+    x: isBack ? -360 : 360,
+    y: 2,
+    rotateY: isBack ? 90 : -90,
+    rotateZ: isBack ? -1 : 1,
     opacity: 0,
   }),
   center: {
     x: 0,
     y: 0,
+    rotateY: 0,
+    rotateZ: 0,
     opacity: 1,
     transition: {
-      duration: 0.4,
+      duration: 0.6,
     },
   },
   hide: (isBack) => ({
-    x: isBack ? 100 : -100,
-    y: -20,
+    x: isBack ? 360 : -360,
+    y: 2,
+    rotateY: isBack ? -90 : 90,
+    rotateZ: isBack ? 1 : -1,
     opacity: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.6,
     },
   }),
 };
@@ -57,7 +63,8 @@ const Intro = () => {
       <Parallax className="intro-container" strength={300} bgImage={bg1}>
         <div>
           <motion.img
-            src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
+            //src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
+            src="/bannerbg.jpeg"
             alt=""
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
