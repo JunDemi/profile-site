@@ -7,10 +7,10 @@ export const introduceText = [
 export const portfolioList = [
   {
     viewImg: [
-      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/h3qku2lbphxeyjbrtrdj",
-      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/ky1sot3zp5m17wcdcv2o",
-      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/trnsq7dqomyhna2brdck",
-      "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/cz1ww2ssm6r6q1gjmtnv"
+      "/the-market/themarket1.png",
+      "/the-market/themarket2.png",
+      "/the-market/themarket3.png",
+      "/the-market/themarket4.png"
     ],
     siteName: "The Market",
     siteIntro: "사이트 간단 소개글",
@@ -28,6 +28,7 @@ export const portfolioList = [
       "무한 스크롤",
       "모바일 반응형 X",
     ],
+    link: "https://the-market-omega.vercel.app/"
   },
   {
     viewImg: [
@@ -43,6 +44,7 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/f2354c79ec6bfb9ba6139a72bbc75c8c3a51a63801efdb6961d7a146b08e112d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d303030303030",
     ],
     feature: ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
+    link: "https://the-market-omega.vercel.app/"
   },
   {
     viewImg: [
@@ -58,6 +60,7 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/f2354c79ec6bfb9ba6139a72bbc75c8c3a51a63801efdb6961d7a146b08e112d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d303030303030",
     ],
     feature: ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
+    link: "https://the-market-omega.vercel.app/"
   },
   {
     viewImg: [
@@ -73,6 +76,7 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/f2354c79ec6bfb9ba6139a72bbc75c8c3a51a63801efdb6961d7a146b08e112d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d303030303030",
     ],
     feature: ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
+    link: "https://the-market-omega.vercel.app/"
   },
   {
     viewImg: [
@@ -88,6 +92,7 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/f2354c79ec6bfb9ba6139a72bbc75c8c3a51a63801efdb6961d7a146b08e112d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d303030303030",
     ],
     feature: ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
+    link: "https://the-market-omega.vercel.app/"
   },
   {
     viewImg: [
@@ -103,6 +108,7 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/f2354c79ec6bfb9ba6139a72bbc75c8c3a51a63801efdb6961d7a146b08e112d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d303030303030",
     ],
     feature: ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
+    link: "https://the-market-omega.vercel.app/"
   },
   {
     viewImg: [
@@ -118,5 +124,6 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/f2354c79ec6bfb9ba6139a72bbc75c8c3a51a63801efdb6961d7a146b08e112d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3631444146423f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d303030303030",
     ],
     feature: ["feature 1", "feature 2", "feature 3", "feature 4", "feature 5"],
+    link: "https://the-market-omega.vercel.app/"
   },
 ];
