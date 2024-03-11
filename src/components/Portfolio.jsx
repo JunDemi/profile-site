@@ -4,11 +4,11 @@ import { portfolioList } from "../Utils";
 
 const boxVar = {
   entry: (isBack) => ({
-    y: isBack ? -30 : 30,
+    y: isBack ? -50 : 50,
     scale: isBack ? 0.95 : 1.05,
     opacity: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
     },
   }),
   center: {
@@ -16,15 +16,15 @@ const boxVar = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
     },
   },
   hide: (isBack) => ({
-    y: isBack ? 30 : -30,
+    y: isBack ? 50 : -50,
     scale: isBack ? 1.05 : 0.95,
     opacity: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
     },
   }),
 };
