@@ -11,6 +11,7 @@ export const portfolioList = [
       "/the-market/themarket2.png",
       "/the-market/themarket5.png",
       "/the-market/themarket3.png",
+      "/the-market/themarket6.png",
       "/the-market/themarket4.png",
     ],
     siteName: "The Market",
@@ -164,7 +165,7 @@ export const portfolioList = [
     "https://camo.githubusercontent.com/0fa22473518fc859b70d5b012952c972ac47648b3ea9295dd95d85a20aadbab4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f534353532d4343363639393f7374796c653d666f722d7468652d6261646765266c6f676f3d73617373266c6f676f436f6c6f723d666666666666"
     ],
     feature: [
-      "8개 언어 지원",
+      "8개 국어 지원",
       "소셜 로그인",
       "구독 결제 서비스",
       "동영상 파일에 음향 마스터링, BGM 추가 기능",

@@ -5,7 +5,7 @@ import { portfolioList } from "../Utils";
 const boxVar = {
   entry: (isBack) => ({
     y: isBack ? -50 : 50,
-    scale: isBack ? 0.95 : 1.05,
+    scale: isBack ? 0.9 : 1.1,
     opacity: 0,
     transition: {
       duration: 0.4,
@@ -21,7 +21,7 @@ const boxVar = {
   },
   hide: (isBack) => ({
     y: isBack ? 50 : -50,
-    scale: isBack ? 1.05 : 0.95,
+    scale: isBack ? 1.1 : 0.9,
     opacity: 0,
     transition: {
       duration: 0.4,

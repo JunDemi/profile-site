@@ -193,7 +193,7 @@
     .portfolio-slider {
         margin-top: 3rem;
         position: relative;
-        height: 380px;
+        height: 400px;
         width: 100%;
         .portfolio-slide {
             z-index: 3;
@@ -311,8 +311,7 @@
     .portfolio-slide-button{
         position: absolute;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 80px;
         z-index: 4;
         display: flex;
         flex-direction: column;
