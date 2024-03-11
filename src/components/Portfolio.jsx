@@ -4,21 +4,24 @@ import { portfolioList } from "../Utils";
 
 const boxVar = {
   entry: (isBack) => ({
-    x: isBack ? -40 : 40,
+    y: isBack ? -30 : 30,
+    scale: isBack ? 0.95 : 1.05,
     opacity: 0,
     transition: {
       duration: 0.6,
     },
   }),
   center: {
-    x: 0,
+    y: 0,
+    scale: 1,
     opacity: 1,
     transition: {
       duration: 0.6,
     },
   },
-  hide: (isBack) =>({
-    x: isBack ? 40 : -40,
+  hide: (isBack) => ({
+    y: isBack ? 30 : -30,
+    scale: isBack ? 1.05 : 0.95,
     opacity: 0,
     transition: {
       duration: 0.6,
@@ -100,6 +103,7 @@ const Portfolio = () => {
                   initial="entry"
                   animate="center"
                   exit="hide"
+                  transition={{ delay: 0.3 }}
                 >
                   <div className="portfolio-slide-img">
                     <img className="macbook-img" src="/macbook.webp" alt="" />
@@ -175,46 +179,57 @@ const Portfolio = () => {
               )
           )}
         </AnimatePresence>
-        <div className="portfolio-slide-number">
-          {currentPage + 1} / {portfolioList.length}
-        </div>
-        <div
-          className="portfolio-slider-button-prev"
-          onClick={() => prevCard(portfolioList.length)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
+        <div className="portfolio-slide-button">
+          <motion.div
+            className="portfolio-slider-button-prev"
+            onClick={() => prevCard(portfolioList.length)}
+            initial={{ y: 0 }}
+            whileTap={{ y: -8 }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-            />
-          </svg>
-          Prev
-        </div>
-        <div
-          className="portfolio-slider-button-next"
-          onClick={() => nextCard(portfolioList.length)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
+            Prev
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 18.75 7.5-7.5 7.5 7.5"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m4.5 12.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </motion.div>
+          <div className="portfolio-slide-number">
+            {currentPage + 1} / {portfolioList.length}
+          </div>
+          <motion.div
+            className="portfolio-slider-button-next"
+            onClick={() => nextCard(portfolioList.length)}
+            initial={{ y: 0 }}
+            whileTap={{ y: 8 }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-            />
-          </svg>
-          Next
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+              />
+            </svg>
+            Next
+          </motion.div>
         </div>
       </motion.div>
     </div>
