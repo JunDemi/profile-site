@@ -63,8 +63,8 @@ const Intro = () => {
       <Parallax className="intro-container" strength={300} bgImage={bg1}>
         <div>
           <motion.img
-            //src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
-            src="/bannerbg.jpeg"
+            src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
+            //src="/bannerbg.jpeg"
             alt=""
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

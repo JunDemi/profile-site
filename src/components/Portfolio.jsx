@@ -63,6 +63,7 @@ const Portfolio = () => {
     //이전 버튼 클릭
     set_back(true);
     set_currentPage((prev) => (prev === 0 ? imgLength - 1 : prev - 1)); //이전 숫자로 변경하여 페이지 넘김
+    set_viewPage(0);
   };
   const nextView = (imgLength) => {
     set_viewPage((prev) => (prev === imgLength - 1 ? 0 : prev + 1));
@@ -167,7 +168,7 @@ const Portfolio = () => {
                     </div>
                     <h4>Feature</h4>
                     {data.feature.map((text, num) => (
-                      <p key={num}>• {text}</p>
+                      <p key={num}>{text}</p>
                     ))}
                   </div>
                 </motion.div>
