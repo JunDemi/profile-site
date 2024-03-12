@@ -3,7 +3,70 @@ export const introduceText = [
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti, facilis fugit quam voluptate omnis, impedit id nisi voluptas cupiditate autem numquam quo odio laudantium rerum, perferendis in excepturi nobis.",
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti, facilis fugit quam voluptate omnis, impedit id nisi voluptas cupiditate autem numquam quo odio laudantium rerum, perferendis in excepturi nobis.",
 ];
-
+export const stackFront = [
+  {
+    stackName: "HTML5",
+    stackImg: "/stack-img/html.png"
+  },
+  {
+    stackName: "CSS3",
+    stackImg: "/stack-img/css.png"
+  },
+  {
+    stackName: "JavaScript",
+    stackImg: "/stack-img/js.png"
+  },
+  {
+    stackName: "TypeScript",
+    stackImg: "/stack-img/ts.png"
+  },
+  {
+    stackName: "React.js",
+    stackImg: "/stack-img/react.png"
+  },
+  {
+    stackName: "Next.js",
+    stackImg: "/stack-img/next.png"
+  },
+  {
+    stackName: "Styled Components",
+    stackImg: "/stack-img/styled.png"
+  },
+  {
+    stackName: "Tailwind CSS",
+    stackImg: "/stack-img/tailwind.png"
+  },
+  {
+    stackName: "SCSS",
+    stackImg: "/stack-img/scss.png"
+  },
+  {
+    stackName: "Framer Motion",
+    stackImg: "/stack-img/framer.png"
+  },
+];
+export const stackBack = [
+  {
+    stackName: "Firebase",
+    stackImg: "/stack-img/fb.png"
+  },
+  {
+    stackName: "Prisma",
+    stackImg: "/stack-img/prisma.png"
+  },
+  {
+    stackName: "Planet Scale",
+    stackImg: "/stack-img/psc.png"
+  },
+  {
+    stackName: "AWS RDS",
+    stackImg: "/stack-img/aws.png"
+  },
+  {
+    stackName: "Cloudinary",
+    stackImg: "/stack-img/cloudi.png"
+  }
+];
 export const portfolioList = [
   {
     viewImg: [
@@ -50,7 +113,7 @@ export const portfolioList = [
       "MutaionObserver(스크롤 변화)",
       "캐릭터 선택 시 모달 생성 애니메이션",
       "캐릭터 스탯, 장비, 캐시, 스킬 조회",
-      "길드원 외 다른 캐릭터 검색",
+      "다른 캐릭터 검색",
       "모바일 반응형"
     ],
     link: "https://maplewings.netlify.app/",
