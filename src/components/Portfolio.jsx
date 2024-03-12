@@ -78,18 +78,17 @@ const Portfolio = () => {
   return (
     <div className="portfolio-container">
       <motion.h1
-        ref={ref2}
-        initial={{ opacity: 0, x: 30 }}
-        animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-        transition={{ delay: 0.6, ease: "easeOut" }}
+        initial={{ opacity: 0, x: -100 }}
+        animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+        transition={{ delay: 0.5, ease: "easeOut"}}
       >
         Portfolio
       </motion.h1>
       <motion.div
         className="portfolio-slider"
-        initial={{ opacity: 0, x: 30 }}
-        animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-        transition={{ delay: 0.6, ease: "easeOut" }}
+        initial={{ opacity: 0, x: 100 }}
+        animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+        transition={{ delay: 0.5, ease: "easeOut" }}
       >
         <AnimatePresence mode="sync" custom={back}>
           {portfolioList.map(
@@ -195,8 +194,8 @@ const Portfolio = () => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="m4.5 18.75 7.5-7.5 7.5 7.5"
               />
               <path
@@ -214,6 +213,7 @@ const Portfolio = () => {
             onClick={() => nextCard(portfolioList.length)}
             initial={{ y: 0 }}
             whileTap={{ y: 8 }}
+            ref={ref2}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

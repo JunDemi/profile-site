@@ -1,8 +1,4 @@
-/*     Home     */
-.contact {
-    height: 100dvh;
-}
-
+/*     intro     */
 .intro-container {
     height: 100dvh;
     display: flex;
@@ -111,45 +107,55 @@
 
 .my-skill {
     padding: 5rem 7rem;
+
     h1 {
         font-size: 40px;
         font-weight: lighter;
         margin-bottom: 4rem;
     }
-    .my-skill-front{
+
+    .my-skill-front {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
         p {
             font-weight: lighter;
             font-size: 20px;
             line-height: 30px;
             width: 500px;
         }
-    
+
         .my-skill-list {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 3px;
-            h2{
+
+            h2 {
                 grid-column: span 5;
-                font-weight: bold;
-                font-size: 15px;
+                font-weight: 300;
+                font-size: 18px;
+                letter-spacing: -1px;
             }
-            div{
+
+            div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 width: 140px;
                 height: 140px;
-                color: white;
-                font-size: 14px;
-                font-weight: bold;
-                letter-spacing: -0.4px;
                 background-color: black;
                 gap: 10px;
-                img{
+
+                h3 {
+                    color: white;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: -0.4px;
+                }
+
+                img {
                     width: 70px;
                     height: 70px;
                 }
@@ -157,19 +163,22 @@
         }
     }
 }
-
+/*     portfolio     */
 .portfolio-container {
     background-color: whitesmoke;
     padding: 5rem 7rem;
+
     h1 {
         font-size: 40px;
         font-weight: lighter;
     }
+
     .portfolio-slider {
         margin-top: 3rem;
         position: relative;
         height: 400px;
         width: 100%;
+
         .portfolio-slide {
             z-index: 3;
             width: 100%;
@@ -184,58 +193,66 @@
                 height: 400px;
                 overflow: hidden;
                 position: relative;
+
                 .macbook-img {
                     width: 650px;
                     height: 400px;
                     z-index: 3;
                     overflow: hidden;
                 }
-                .macbook-img-slider{
+
+                .macbook-img-slider {
                     cursor: pointer;
                     position: absolute;
                     top: 24px;
                     left: 75px;
                     z-index: 2;
-                    .view-slider{
+
+                    .view-slider {
                         position: relative;
                         width: 501px;
-                            height: 325px;
-                        img{
+                        height: 325px;
+
+                        img {
                             position: absolute;
                             width: 501px;
                             height: 325px;
                         }
-                        .view-page-button{
-                                transform: translateX(-50%);
-                                opacity: 0;
-                                position: absolute;
-                                bottom: 2px;
-                                left: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                gap: 10px;
-                                transition: all .3s;
-                                background-color: rgba(0,0,0,0.6);
-                                border-radius: 30px;
-                                svg{
-                                    width: 15px;
-                                    height: 15px;
-                                    padding: 2px;
-                                    border-radius: 50%;
-                                    stroke: white;
-                                    fill: none;
-                                }
-                                span{
-                                    text-align: center;
-                                    font-size: 12px;
-                                    letter-spacing: 3px;
-                                    color: white;
-                                    padding: 3px 13px;
-                                }
+
+                        .view-page-button {
+                            transform: translateX(-50%);
+                            opacity: 0;
+                            position: absolute;
+                            bottom: 2px;
+                            left: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            transition: all .3s;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            border-radius: 30px;
+
+                            svg {
+                                width: 15px;
+                                height: 15px;
+                                padding: 2px;
+                                border-radius: 50%;
+                                stroke: white;
+                                fill: none;
+                            }
+
+                            span {
+                                text-align: center;
+                                font-size: 12px;
+                                letter-spacing: 3px;
+                                color: white;
+                                padding: 3px 13px;
+                            }
                         }
-                        &:hover{
-                            .view-page-button{
+
+                        &:hover {
+                            .view-page-button {
                                 opacity: 1;
                             }
                         }
@@ -245,6 +262,7 @@
 
             .portfolio-slide-text {
                 max-width: 500px;
+
                 h2 {
                     font-weight: bold;
                     font-size: 24px;
@@ -283,7 +301,8 @@
             }
         }
     }
-    .portfolio-slide-button{
+
+    .portfolio-slide-button {
         position: absolute;
         right: 0;
         top: 80px;
@@ -293,6 +312,7 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
+
         .portfolio-slide-number {
             display: flex;
             justify-content: center;
@@ -304,6 +324,7 @@
             width: 70px;
             background-color: white;
         }
+
         .portfolio-slider-button-prev {
             display: flex;
             flex-direction: column;
@@ -313,18 +334,22 @@
             color: #787878;
             font-size: 13px;
             gap: 5px;
+
             svg {
                 stroke: #787878;
                 width: 30px;
                 height: 30px;
             }
-            &:hover{
+
+            &:hover {
                 color: #9e9e9e;
-                svg{
+
+                svg {
                     stroke: #9e9e9e;
                 }
             }
         }
+
         .portfolio-slider-button-next {
             display: flex;
             flex-direction: column;
@@ -334,17 +359,34 @@
             color: #787878;
             font-size: 13px;
             gap: 5px;
+
             svg {
                 stroke: #787878;
                 width: 30px;
                 height: 30px;
             }
-            &:hover{
+
+            &:hover {
                 color: #9e9e9e;
-                svg{
+
+                svg {
                     stroke: #9e9e9e;
                 }
             }
         }
     }
 }
+/*     Contact     */
+.contact-container{
+    .contact-section{
+        height: 100dvh;
+    }
+    .footer{
+        border-top: 0.5px solid #c1c1c160;
+        padding: 3rem;
+        font-size: 14px;
+        font-weight: 200;
+        color: #b9b9b9;
+    }
+}
+/*     footer     */

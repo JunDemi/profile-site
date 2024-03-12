@@ -36,6 +36,8 @@ const bg1 =
 const Intro = () => {
   const ref = useRef(null);
   const inview = useInView(ref, { once: true });
+  const ref2 = useRef(null);
+  const inview2 = useInView(ref2, { once: true });
   const [back, set_back] = useState(false);
   const [pause, set_pause] = useState(false);
   const [currentPage, set_currentPage] = useState(0);
@@ -189,14 +191,20 @@ const Intro = () => {
       </Parallax>
 
       <div className="my-skill">
-        <h1>My Skills</h1>
+        <motion.h1
+          initial={{ opacity: 0, x: -100 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ delay: 0.3, ease: "easeOut" }}
+        >
+          My Skills
+        </motion.h1>
         <motion.div
-        className="my-skill-front"
+          className="my-skill-front"
           initial={{ opacity: 0, x: -30 }}
           animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
           transition={{ delay: 0.3, ease: "easeOut" }}
         >
-          <p ref={ref}>
+          <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
             corrupti, facilis fugit quam voluptate omnis, impedit id nisi
             voluptas cupiditate autem numquam quo odio laudantium rerum,
@@ -205,21 +213,28 @@ const Intro = () => {
           <div className="my-skill-list">
             <h2>Front End</h2>
             {stackFront.map((data, number) => (
-              <div key={number}>
-                {data.stackName}
+              <motion.div
+                key={number}
+                initial={{ opacity: 0, y: 130, scale: 0 }}
+                animate={
+                  inview ? { opacity: 1,  y: 0, scale: 1,} : { opacity: 0, y: 130, scale: 0 }
+                }
+                transition={{ delay: 0.3 + (number / 10) * 1.8 }}
+              >
+                <h3>{data.stackName}</h3>
                 <img src={data.stackImg} alt="" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
-        <div style={{margin: "6rem 0"}}/>
+        <div style={{ margin: "1rem 0", padding: "3rem 0" }}  ref={ref}/>
         <motion.div
-        className="my-skill-front"
-          initial={{ opacity: 0, x: -30 }}
-          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+          className="my-skill-front"
+          initial={{ opacity: 0, x: 100 }}
+          animate={inview2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
           transition={{ delay: 0.3, ease: "easeOut" }}
         >
-          <p ref={ref}>
+          <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
             corrupti, facilis fugit quam voluptate omnis, impedit id nisi
             voluptas cupiditate autem numquam quo odio laudantium rerum,
@@ -228,13 +243,21 @@ const Intro = () => {
           <div className="my-skill-list">
             <h2>Database & Storage</h2>
             {stackBack.map((data, number) => (
-              <div key={number}>
-                {data.stackName}
+              <motion.div
+              key={number}
+              initial={{ opacity: 0, y: -130, scale: 0 }}
+              animate={
+                inview2 ? { opacity: 1,  y: 0, scale: 1,} : { opacity: 0, y: -130, scale: 0 }
+              }
+                transition={{ delay: 0.3 + (number / 10) * 1.8 }}
+              >
+                <h3>{data.stackName}</h3>
                 <img src={data.stackImg} alt="" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
+        <div ref={ref2}/>
       </div>
     </>
   );

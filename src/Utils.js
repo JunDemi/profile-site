@@ -90,7 +90,7 @@ export const portfolioList = [
       "Firebase 데이터를 차트에 적용",
       "로그인, 회원가입, 프로필 수정, 상품, SNS게시물, 댓글",
       "Recoil과 Framer를 이용한 로그인/회원가입 창 변환동작",
-      "React InfiniteQuery(무한 스크롤)",
+      "Intersection Observer & Infinite Query(무한 스크롤)"
     ],
     link: "https://the-market-omega.vercel.app/",
   },
