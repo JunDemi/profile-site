@@ -3,8 +3,6 @@ import { Parallax } from "react-parallax";
 import Footer from "./Footer";
 
 const Contact = () => {
-  const bg =
-    "https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/swjcwybjg2adzimgjz0g";
   return (
     <Parallax
       className="contact-container"

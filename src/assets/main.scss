@@ -1,104 +1,155 @@
 /*     intro     */
-.intro-container {
+.parallax-container {
     height: 100dvh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    align-items: flex-start;
-    padding-left: 7rem;
-    color: white;
+    justify-content: center;
+    align-items: center;
+    .bg-full {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image: url("../../public/full.png");
+        background-position: bottom;
+        background-size: cover;
+    }
 
-    div {
-        img {
-            width: 150px;
-            height: 150px;
-            margin: 5rem 0 2rem 0;
-            border-radius: 50%;
-        }
+    .bg-mountain {
+        position: absolute;
+        inset: 0;
+        z-index: 20;
+        background-image: url("../../public/mountain.png");
+        background-position: bottom;
+        background-size: cover;
+    }
 
-        h1 {
-            font-weight: lighter;
-            font-size: 48px;
-        }
+    .pa {
+        font-weight: bold;
+        font-size: 77px;
+        z-index: 10;
+        color: white;
+        position: relative;
+    }
 
-        h2 {
-            font-weight: bold;
-            font-size: 48px;
-        }
+    .intro-container {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: white;
 
-        .intro-text-container {
-            line-height: 30px;
-            font-weight: lighter;
-            font-size: 20px;
-            margin: 2rem 0 1rem 0;
-            width: 600px;
-            height: 90px;
+        .intro-left {
             position: relative;
 
-            p {
-                position: absolute;
-            }
-        }
-
-        .intro-text-radio {
-            margin-bottom: 3rem;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
-
-            button {
-                cursor: pointer;
-                border: 1px solid white;
-                border-radius: 50%;
-                width: 10px;
-                height: 10px;
-                padding: 5px;
-                background: none;
-                transition: all .2s;
-            }
-
-            span {
-                cursor: pointer;
+            .intro-name {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 20px;
+                justify-content: flex-start;
+                align-items: flex-end;
+                gap: 1rem;
 
-                svg {
-                    width: 30px;
-                    height: 30px;
+                img {
+                    width: 130px;
+                    height: 130px;
+                }
+
+                h1 {
+                    font-weight: lighter;
+                    font-size: 48px;
+                }
+
+                h2 {
+                    font-weight: bold;
+                    font-size: 48px;
+
                 }
             }
-        }
 
-        .intro-links {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 50px;
+            .intro-text-container {
+                line-height: 30px;
+                font-weight: lighter;
+                font-size: 20px;
+                margin: 2rem 0 1rem 0;
+                width: 600px;
+                height: 90px;
+                position: relative;
 
-            a {
+                p {
+                    position: absolute;
+                }
+            }
+
+            .intro-text-radio {
+                margin-bottom: 3rem;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 gap: 10px;
-                color: #fff;
-                font-size: 13px;
-                font-weight: bold;
 
-                svg {
-                    fill: #ffffff;
-                    width: 38px;
-                    height: 38px;
+                button {
+                    cursor: pointer;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    padding: 5px;
+                    background: none;
+                    transition: all .2s;
+                }
+
+                span {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 20px;
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
             }
+        }
 
-            hr {
-                border: none;
-                width: 1px;
-                height: 35px;
-                background-color: #fff;
-                margin: 0;
+        .intro-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            .intro-links {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 50px;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: bold;
+
+                    svg {
+                        fill: #ffffff;
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+
+                hr {
+                    border: none;
+                    width: 1px;
+                    height: 35px;
+                    background-color: #fff;
+                    margin: 0;
+                }
             }
         }
 
@@ -163,6 +214,7 @@
         }
     }
 }
+
 /*     portfolio     */
 .portfolio-container {
     background-color: whitesmoke;
@@ -376,12 +428,14 @@
         }
     }
 }
+
 /*     Contact     */
-.contact-container{
-    .contact-section{
+.contact-container {
+    .contact-section {
         height: 100dvh;
     }
-    .footer{
+
+    .footer {
         border-top: 0.5px solid #c1c1c160;
         padding: 3rem;
         font-size: 14px;
@@ -389,4 +443,5 @@
         color: #b9b9b9;
     }
 }
+
 /*     footer     */
