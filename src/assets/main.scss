@@ -276,8 +276,6 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
-                gap: 30px;
-
                 .portfolio-slide-img {
                     width: 650px;
                     height: 400px;
@@ -390,78 +388,109 @@
                 }
             }
         }
-    
-        .portfolio-slide-button {
+        .slide-progress-bar{
             position: absolute;
             z-index: 30;
             right: 2rem;
-            top: 50%;
+            top: 30%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-    
-            .portfolio-slide-number {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 13px;
-                color: #656565;
-                padding: 5px 0 3px 0;
-                border-radius: 30px;
-                width: 70px;
-                background-color: white;
-            }
-    
-            .portfolio-slider-button-prev {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                font-size: 13px;
-                gap: 5px;
-    
-                svg {
-                    stroke: #ffffff;
-                    width: 30px;
-                    height: 30px;
-                }
-    
-                &:hover {
-                    color: #9e9e9e;
-    
-                    svg {
-                        stroke: #9e9e9e;
-                    }
+            width: 50px;
+            hr{
+                border: none;
+                background-color: #a7a7a7;
+                width: 0.5px;
+                height: 40px;
+                margin: 0;
+                &:last-child{
+                    display: none;
                 }
             }
-    
-            .portfolio-slider-button-next {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            button{
                 cursor: pointer;
+                background: none;
+                border: 1px solid white;
+                border-radius: 50%;
+                color: white;
+                width: 25px;
+                height: 25px;
                 font-size: 13px;
-                gap: 5px;
-    
-                svg {
-                    stroke: #ffffff;
-                    width: 30px;
-                    height: 30px;
-                }
-    
-                &:hover {
-                    color: #9e9e9e;
-    
-                    svg {
-                        stroke: #9e9e9e;
-                    }
-                }
+                transition: all .3s;
             }
         }
+        // .portfolio-slide-button {
+        //     position: absolute;
+        //     z-index: 30;
+        //     right: 3rem;
+        //     top: 50%;
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     gap: 40px;
+    
+        //     .portfolio-slide-number {
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         font-size: 13px;
+        //         color: #656565;
+        //         padding: 5px 0 3px 0;
+        //         border-radius: 30px;
+        //         width: 70px;
+        //         background-color: white;
+        //     }
+    
+        //     .portfolio-slider-button-prev {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: center;
+        //         align-items: center;
+        //         cursor: pointer;
+        //         font-size: 13px;
+        //         gap: 5px;
+    
+        //         svg {
+        //             stroke: #ffffff;
+        //             width: 30px;
+        //             height: 30px;
+        //         }
+    
+        //         &:hover {
+        //             color: #9e9e9e;
+    
+        //             svg {
+        //                 stroke: #9e9e9e;
+        //             }
+        //         }
+        //     }
+    
+        //     .portfolio-slider-button-next {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: center;
+        //         align-items: center;
+        //         cursor: pointer;
+        //         font-size: 13px;
+        //         gap: 5px;
+    
+        //         svg {
+        //             stroke: #ffffff;
+        //             width: 30px;
+        //             height: 30px;
+        //         }
+    
+        //         &:hover {
+        //             color: #9e9e9e;
+    
+        //             svg {
+        //                 stroke: #9e9e9e;
+        //             }
+        //         }
+        //     }
+        // }
     }
   
 }

@@ -57,18 +57,26 @@ const Portfolio = () => {
   const [currentPage, set_currentPage] = useState(0);
   const [back, set_back] = useState(false);
   const [viewPage, set_viewPage] = useState(0);
-  const nextCard = (imgLength) => {
-    //다음 버튼 클릭
-    set_back(false);
-    set_currentPage((prev) => (prev === imgLength - 1 ? 0 : prev + 1)); //다음 숫자로 변경하여 페이지 넘김. 가장 끝일 경우 동작하지 않도록, 개수는 0부터 시작하지 않으므르 -1
-    set_viewPage(0);
+  const currentPageSet = (current) => {
+    if (currentPage > current) {
+      set_back(true);
+    } else if (currentPage < current) {
+      set_back(false);
+    }
+    set_currentPage(current);
   };
-  const prevCard = (imgLength) => {
-    //이전 버튼 클릭
-    set_back(true);
-    set_currentPage((prev) => (prev === 0 ? imgLength - 1 : prev - 1)); //이전 숫자로 변경하여 페이지 넘김
-    set_viewPage(0);
-  };
+  // const nextCard = (imgLength) => {
+  //   //다음 버튼 클릭
+  //   set_back(false);
+  //   set_currentPage((prev) => (prev === imgLength - 1 ? 0 : prev + 1)); //다음 숫자로 변경하여 페이지 넘김. 가장 끝일 경우 동작하지 않도록, 개수는 0부터 시작하지 않으므르 -1
+  //   set_viewPage(0);
+  // };
+  // const prevCard = (imgLength) => {
+  //   //이전 버튼 클릭
+  //   set_back(true);
+  //   set_currentPage((prev) => (prev === 0 ? imgLength - 1 : prev - 1)); //이전 숫자로 변경하여 페이지 넘김
+  //   set_viewPage(0);
+  // };
   const nextView = (imgLength) => {
     set_viewPage((prev) => (prev === imgLength - 1 ? 0 : prev + 1));
   };
@@ -79,7 +87,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio-container">
       <Parallax
-        strength={400}
+        strength={350}
         bgImage="/bg/portfoliobg.png"
         className="portfolio-bg"
       />
@@ -93,8 +101,8 @@ const Portfolio = () => {
         </motion.h1>
         <motion.div
           className="portfolio-slider"
-          initial={{ opacity: 0, x: 100 }}
-          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 150 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
           transition={{ delay: 0.3, ease: "easeOut" }}
         >
           <AnimatePresence mode="sync" custom={back}>
@@ -190,8 +198,29 @@ const Portfolio = () => {
             )}
           </AnimatePresence>
         </motion.div>
-          <div  ref={ref2}/>
-        <motion.div className="portfolio-slide-button"
+        <motion.div
+          className="slide-progress-bar"
+          initial={{ opacity: 0, x: -150 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -150 }}
+          transition={{ delay: 0.8, ease: "easeOut" }}
+        >
+          {[...Array(portfolioList.length)].map((data, number) => (
+            <>
+          <motion.button ref={ref2} onClick={() => currentPageSet(number)} key={number}
+          style={currentPage === number ? {
+           width: "50px",
+           height: "50px",
+           backgroundColor: "#fff",
+           color: "#000",
+           fontSize: "16px"
+          } : {}}
+         >{number + 1}</motion.button>
+          <hr />
+          </>
+          ))}
+        
+        </motion.div>
+        {/* <motion.div className="portfolio-slide-button"
         initial={{ opacity: 0 }}
         animate={inview ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: 0.3, ease: "easeOut" }}>
@@ -246,7 +275,7 @@ const Portfolio = () => {
             </svg>
             Next
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
