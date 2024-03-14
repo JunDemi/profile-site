@@ -110,7 +110,7 @@ export const portfolioList = [
     "https://camo.githubusercontent.com/8ea312613ae2f44701fd5b6c099b485465760fd90dc2c462dc9ad78f701caf52/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e64204353532d3036423644343f7374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e64637373266c6f676f436f6c6f723d666666666666"
     ],
     feature: [
-      "MutaionObserver(스크롤 변화)",
+      "MutationObserver(스크롤 변화)",
       "캐릭터 선택 시 모달 생성 애니메이션",
       "캐릭터 스탯, 장비, 캐시, 스킬 조회",
       "다른 캐릭터 검색",

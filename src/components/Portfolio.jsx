@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import React, { useRef, useState } from "react";
 import { portfolioList } from "../Utils";
+import { Parallax } from "react-parallax";
 
 const boxVar = {
   entry: (isBack) => ({
@@ -77,108 +78,123 @@ const Portfolio = () => {
   };
   return (
     <div className="portfolio-container">
-      <motion.h1
-        initial={{ opacity: 0, x: -100 }}
-        animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-        transition={{ delay: 0.5, ease: "easeOut"}}
-      >
-        Portfolio
-      </motion.h1>
-      <motion.div
-        className="portfolio-slider"
-        initial={{ opacity: 0, x: 100 }}
-        animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-        transition={{ delay: 0.5, ease: "easeOut" }}
-      >
-        <AnimatePresence mode="sync" custom={back}>
-          {portfolioList.map(
-            (data, page) =>
-              page === currentPage && (
-                <motion.div
-                  className="portfolio-slide"
-                  key={page}
-                  custom={back}
-                  variants={boxVar}
-                  initial="entry"
-                  animate="center"
-                  exit="hide"
-                  transition={{ delay: 0.3 }}
-                >
-                  <div className="portfolio-slide-img">
-                    <img className="macbook-img" src="/bg/macbook.webp" alt="" />
-                    <div className="macbook-img-slider">
-                      <div className="view-slider">
-                        <AnimatePresence mode="sync">
-                          {data.viewImg.map(
-                            (img, num) =>
-                              num === viewPage && (
-                                <motion.img
-                                  src={img}
-                                  alt=""
-                                  key={num}
-                                  variants={viewVar}
-                                  initial="entry"
-                                  animate="center"
-                                  exit="hide"
-                                  onClick={() =>
-                                    window.open(data.link, "_blank")
-                                  }
-                                />
-                              )
-                          )}
-                        </AnimatePresence>
-                        <div className="view-page-button">
-                          <svg
-                            onClick={() => prevView(data.viewImg.length)}
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M15.75 19.5 8.25 12l7.5-7.5"
-                            />
-                          </svg>
-                          <span>
-                            {viewPage + 1}/{data.viewImg.length}
-                          </span>
-                          <svg
-                            onClick={() => nextView(data.viewImg.length)}
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                            />
-                          </svg>
+      <Parallax
+        strength={400}
+        bgImage="/bg/portfoliobg.png"
+        className="portfolio-bg"
+      />
+      <div className="portfolio-content">
+        <motion.h1
+          initial={{ opacity: 0, x: -100 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ delay: 0.3, ease: "easeOut" }}
+        >
+          Portfolio
+        </motion.h1>
+        <motion.div
+          className="portfolio-slider"
+          initial={{ opacity: 0, x: 100 }}
+          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          transition={{ delay: 0.3, ease: "easeOut" }}
+        >
+          <AnimatePresence mode="sync" custom={back}>
+            {portfolioList.map(
+              (data, page) =>
+                page === currentPage && (
+                  <motion.div
+                    className="portfolio-slide"
+                    key={page}
+                    custom={back}
+                    variants={boxVar}
+                    initial="entry"
+                    animate="center"
+                    exit="hide"
+                    transition={{ delay: 0.3 }}
+                  >
+                    <div className="portfolio-slide-img">
+                      <img
+                        className="macbook-img"
+                        src="/bg/macbook.webp"
+                        alt=""
+                      />
+                      <div className="macbook-img-slider">
+                        <div className="view-slider">
+                          <AnimatePresence mode="sync">
+                            {data.viewImg.map(
+                              (img, num) =>
+                                num === viewPage && (
+                                  <motion.img
+                                    src={img}
+                                    alt=""
+                                    key={num}
+                                    variants={viewVar}
+                                    initial="entry"
+                                    animate="center"
+                                    exit="hide"
+                                    onClick={() =>
+                                      window.open(data.link, "_blank")
+                                    }
+                                  />
+                                )
+                            )}
+                          </AnimatePresence>
+                          <div className="view-page-button">
+                            <svg
+                              onClick={() => prevView(data.viewImg.length)}
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M15.75 19.5 8.25 12l7.5-7.5"
+                              />
+                            </svg>
+                            <span>
+                              {viewPage + 1}/{data.viewImg.length}
+                            </span>
+                            <svg
+                              onClick={() => nextView(data.viewImg.length)}
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="portfolio-slide-text">
-                    <h2>{data.siteName}</h2>
-                    <h3>{data.siteIntro}</h3>
-                    <div className="portfolio-slide-stackImg">
-                      {data.stackImg.map((img, num) => (
-                        <img key={num} src={img} alt="" />
+                    <div className="portfolio-slide-text">
+                      <h2>{data.siteName}</h2>
+                      <h3>{data.siteIntro}</h3>
+                      <div className="portfolio-slide-stackImg">
+                        {data.stackImg.map((img, num) => (
+                          <img key={num} src={img} alt="" />
+                        ))}
+                      </div>
+                      <h4>Feature</h4>
+                      {data.feature.map((text, num) => (
+                        <p key={num}>{text}</p>
                       ))}
                     </div>
-                    <h4>Feature</h4>
-                    {data.feature.map((text, num) => (
-                      <p key={num}>{text}</p>
-                    ))}
-                  </div>
-                </motion.div>
-              )
-          )}
-        </AnimatePresence>
-        <div className="portfolio-slide-button">
+                  </motion.div>
+                )
+            )}
+          </AnimatePresence>
+        </motion.div>
+          <div  ref={ref2}/>
+        <motion.div className="portfolio-slide-button"
+        initial={{ opacity: 0 }}
+        animate={inview ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 0.3, ease: "easeOut" }}>
           <motion.div
             className="portfolio-slider-button-prev"
             onClick={() => prevCard(portfolioList.length)}
@@ -230,8 +246,8 @@ const Portfolio = () => {
             </svg>
             Next
           </motion.div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
