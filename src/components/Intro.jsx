@@ -44,7 +44,7 @@ const Intro = () => {
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const mountainY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "800%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   const [back, set_back] = useState(false);
   const [pause, set_pause] = useState(false);
@@ -71,16 +71,17 @@ const Intro = () => {
   return (
     <>
       <div className="parallax-container" ref={parallaxRef}>
-      <motion.div
-      className="pa"
-        style={{ y: textY }}
-      >
-        PARALLAX
-      </motion.div>
-        {/* <div className="intro-container" style={{ y: textY }}>
-       
+        <motion.div className="intro-container" style={{ y: textY }}>
           <div className="intro-left">
             <div className="intro-name">
+              <motion.img
+                src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
+                //src="/bannerbg.jpeg"
+                alt=""
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.0 }}
+              />
               <div>
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
@@ -97,14 +98,6 @@ const Intro = () => {
                   Front-End Developer.
                 </motion.h2>
               </div>
-              <motion.img
-                src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
-                //src="/bannerbg.jpeg"
-                alt=""
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.0 }}
-              />
             </div>
             <motion.div
               className="intro-text-container"
@@ -130,7 +123,15 @@ const Intro = () => {
                 )}
               </AnimatePresence>
             </motion.div>
-            <motion.div
+          </div>
+          <div className="intro-right">
+              PortFolio
+          </div>
+        </motion.div>
+        <motion.div className="bg-full" style={{ y: mountainY }} />
+        <motion.div className="bg-mountain" style={{ y: backgroundY }} />
+        <div className="intro-buttons">
+        <motion.div
               className="intro-text-radio"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -177,9 +178,7 @@ const Intro = () => {
                 )}
               </span>
             </motion.div>
-          </div>
-          <div className="intro-right">
-            <motion.div
+        <motion.div
               className="intro-links"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -211,10 +210,7 @@ const Intro = () => {
                 <span>Notion</span>
               </motion.a>
             </motion.div>
-          </div>
-        </div> */}
-        <motion.div className="bg-full" style={{ y: mountainY }} />
-        <motion.div className="bg-mountain" style={{ y: backgroundY }}/>
+        </div>
       </div>
     </>
   );
