@@ -12,7 +12,7 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background-image: url("../../public/full.png");
+        background-image: url("../../public/bg/full.png");
         background-position: bottom;
         background-size: cover;
     }
@@ -21,7 +21,7 @@
         position: absolute;
         inset: 0;
         z-index: 20;
-        background-image: url("../../public/mountain.png");
+        background-image: url("../../public/bg/mountain.png");
         background-position: bottom;
         background-size: cover;
     }
@@ -158,14 +158,14 @@
 
 /*     my skill     */
 .my-skill {
-    height: 100dvh;
+    height: 110dvh;
     padding: 2rem 0;
     color: white;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
-    background-image: url('../../public/skillbg.jpeg');
+    background-image: url('../../public/bg/skillbg.jpeg');
     background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
@@ -216,7 +216,7 @@
                     align-items: center;
                     width: 140px;
                     height: 140px;
-                    background-color: rgba(0, 0, 0, 0.759);
+                    background-color: #00000087;
                     border: 0.5px solid white;
                     gap: 10px;
 
@@ -228,8 +228,8 @@
                     }
 
                     img {
-                        width: 70px;
-                        height: 70px;
+                        width: 50px;
+                        height: 50px;
                     }
                 }
             }

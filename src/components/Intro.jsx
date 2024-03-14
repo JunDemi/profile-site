@@ -124,7 +124,7 @@ const Intro = () => {
           </div>
           <motion.img
             className="intro-moon"
-            src="/cresent.png"
+            src="/bg/cresent.png"
             alt=""
             initial={{ opacity: 0, y: 200, x: -200 }}
             animate={{ opacity: 1, y: 0, x: 0 }}

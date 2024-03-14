@@ -89,7 +89,7 @@ const Skills = () => {
         <div ref={ref2} />
       </div>
       <motion.div className="skill-moon"  style={{ y: textY }} initial={{opacity: 0}} animate={inview ? {opacity: 1} : {opacity: 0}}>
-        <img src="/moon.png" alt=""/>
+        <img src="/bg/moon.png" alt=""/>
       </motion.div>
       <div className="skill-bg"/>
     </div>

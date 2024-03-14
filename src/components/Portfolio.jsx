@@ -105,7 +105,7 @@ const Portfolio = () => {
                   transition={{ delay: 0.3 }}
                 >
                   <div className="portfolio-slide-img">
-                    <img className="macbook-img" src="/macbook.webp" alt="" />
+                    <img className="macbook-img" src="/bg/macbook.webp" alt="" />
                     <div className="macbook-img-slider">
                       <div className="view-slider">
                         <AnimatePresence mode="sync">
