@@ -133,10 +133,13 @@ const Portfolio = () => {
                     exit="hide"
                     transition={{ delay: 0.3 }}
                   >
-                    <div className="portfolio-slide-img">
-                      <img
+                    <motion.div 
+                    className="portfolio-slide-img"
+                    layoutId={`macbook${page}`}
+                    >
+                      <motion.img
                         className="macbook-img"
-                        src="/bg/macbook.webp"
+                        src="/bg/macbook.png"
                         alt=""
                       />
                       <div className="macbook-img-slider">
@@ -191,7 +194,7 @@ const Portfolio = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                     <div className="portfolio-slide-text">
                       <div>
                         <Link to={data.link} target="_blank">
