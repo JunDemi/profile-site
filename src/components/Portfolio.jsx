@@ -233,15 +233,15 @@ const Portfolio = () => {
         </motion.div>
         <motion.div
           className="slide-progress-bar"
-          initial={{ opacity: 0, x: -150 }}
-          animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -150 }}
-          transition={{ delay: 0.8, ease: "easeOut" }}
         >
           {[...Array(portfolioList.length)].map((data, number) => (
             <>
               <motion.button
                 ref={ref2}
                 onClick={() => currentPageSet(number)}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={inview ? {opacity: 1, scale: 1} : {opacity: 0, scale: 0}}
+                transition={{ delay: 0.8 + number / 10 * 1.5}}
                 key={number}
                 style={
                   currentPage === number
@@ -257,7 +257,9 @@ const Portfolio = () => {
               >
                 {number + 1}
               </motion.button>
-              <hr />
+              <motion.hr initial={{ opacity: 0, scale: 0 }}
+                animate={inview ? {opacity: 1, scale: 1} : {opacity: 0, scale: 0}}
+                transition={{ delay: 0.8 + number / 10 * 1.5}}/>
             </>
           ))}
         </motion.div>
