@@ -1,13 +1,21 @@
-import React, {useRef} from "react";
-import { motion, useInView,} from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { stackBack, stackFront } from "../Utils";
 const Skills = () => {
-    const ref = useRef(null);
+  const parallaxRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: parallaxRef,
+    offset: ["start start", "end start"],
+  });
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "130%"]);
+
+  const ref = useRef(null);
   const inview = useInView(ref, { once: true });
   const ref2 = useRef(null);
   const inview2 = useInView(ref2, { once: true });
-    return(
-        <div className="my-skill">
+  return (
+    <div className="my-skill" ref={parallaxRef}>
+      <div className="skill-content">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
@@ -80,6 +88,11 @@ const Skills = () => {
         </motion.div>
         <div ref={ref2} />
       </div>
-    );
-}
+      <motion.div className="skill-moon"  style={{ y: textY }} initial={{opacity: 0}} animate={inview ? {opacity: 1} : {opacity: 0}}>
+        <img src="/moon.png" alt=""/>
+      </motion.div>
+      <div className="skill-bg"/>
+    </div>
+  );
+};
 export default Skills;

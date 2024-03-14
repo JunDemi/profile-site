@@ -1,7 +1,6 @@
 import {
   AnimatePresence,
   motion,
-  useInView,
   useScroll,
   useTransform,
 } from "framer-motion";
@@ -76,7 +75,6 @@ const Intro = () => {
             <div className="intro-name">
               <motion.img
                 src="https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/yrlrc4dczr4ezhyyaif5"
-                //src="/bannerbg.jpeg"
                 alt=""
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -133,8 +131,10 @@ const Intro = () => {
             transition={{ delay: 1.8 }}
           />
         </motion.div>
+
         <motion.div className="bg-full" style={{ y: mountainY }} />
         <motion.div className="bg-mountain" style={{ y: backgroundY }} />
+        
         <div className="intro-buttons">
           <motion.div
             className="intro-text-radio"

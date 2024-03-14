@@ -6,65 +6,65 @@ export const introduceText = [
 export const stackFront = [
   {
     stackName: "HTML5",
-    stackImg: "/stack-img/html.png"
+    stackImg: "/stack icons/html.png"
   },
   {
     stackName: "CSS3",
-    stackImg: "/stack-img/css.png"
+    stackImg: "/stack icons/css.png"
   },
   {
     stackName: "JavaScript",
-    stackImg: "/stack-img/js.png"
+    stackImg: "/stack icons/js.png"
   },
   {
     stackName: "TypeScript",
-    stackImg: "/stack-img/ts.png"
+    stackImg: "/stack icons/ts.png"
   },
   {
     stackName: "React.js",
-    stackImg: "/stack-img/react.png"
+    stackImg: "/stack icons/react.png"
   },
   {
     stackName: "Next.js",
-    stackImg: "/stack-img/next.png"
+    stackImg: "/stack icons/next.png"
   },
   {
     stackName: "Styled Components",
-    stackImg: "/stack-img/styled.png"
+    stackImg: "/stack icons/styled.png"
   },
   {
     stackName: "Tailwind CSS",
-    stackImg: "/stack-img/tailwind.png"
+    stackImg: "/stack icons/tail.png"
   },
   {
     stackName: "SCSS",
-    stackImg: "/stack-img/scss.png"
+    stackImg: "/stack icons/scss.png"
   },
   {
     stackName: "Framer Motion",
-    stackImg: "/stack-img/framer.png"
+    stackImg: "/stack icons/framer.png"
   },
 ];
 export const stackBack = [
   {
     stackName: "Firebase",
-    stackImg: "/stack-img/fb.png"
+    stackImg: "/stack icons/fb.png"
   },
   {
     stackName: "Prisma",
-    stackImg: "/stack-img/prisma.png"
+    stackImg: "/stack icons/prisma.png"
   },
   {
     stackName: "Planet Scale",
-    stackImg: "/stack-img/psc.png"
+    stackImg: "/stack icons/ps.png"
   },
   {
     stackName: "AWS RDS",
-    stackImg: "/stack-img/aws.png"
+    stackImg: "/stack icons/aws.png"
   },
   {
     stackName: "Cloudinary",
-    stackImg: "/stack-img/cloudi.png"
+    stackImg: "/stack icons/clou.png"
   }
 ];
 export const portfolioList = [

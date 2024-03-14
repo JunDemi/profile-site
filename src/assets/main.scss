@@ -7,6 +7,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
     .bg-full {
         position: absolute;
         inset: 0;
@@ -24,6 +25,7 @@
         background-position: bottom;
         background-size: cover;
     }
+
     .intro-container {
         padding: 13rem 7rem 0 7rem;
         width: 100%;
@@ -79,17 +81,20 @@
             height: 150px;
         }
     }
-    .intro-buttons{
+
+    .intro-buttons {
         position: absolute;
-        left:7rem;
+        left: 7rem;
         bottom: 4rem;
         z-index: 30;
+
         .intro-text-radio {
             margin-bottom: 3rem;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
+
             button {
                 cursor: pointer;
                 border: 1px solid white;
@@ -100,13 +105,14 @@
                 background: none;
                 transition: all .2s;
             }
+
             span {
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-left: 20px;
-    
+
                 svg {
                     width: 30px;
                     height: 30px;
@@ -114,11 +120,13 @@
                 }
             }
         }
+
         .intro-links {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 50px;
+
             a {
                 display: flex;
                 flex-direction: column;
@@ -128,14 +136,14 @@
                 color: #fff;
                 font-size: 13px;
                 font-weight: bold;
-    
+
                 svg {
                     fill: #ffffff;
                     width: 38px;
                     height: 38px;
                 }
             }
-    
+
             hr {
                 border: none;
                 width: 1px;
@@ -145,64 +153,97 @@
             }
         }
     }
-   
+
 }
 
+/*     my skill     */
 .my-skill {
-    padding: 5rem 7rem;
-
-    h1 {
-        font-size: 40px;
-        font-weight: lighter;
-        margin-bottom: 4rem;
+    height: 100dvh;
+    padding: 2rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('../../public/skillbg.jpeg');
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    .skill-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
     }
-
-    .my-skill-front {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        p {
+    .skill-content {
+        top: 5rem;
+        left: 7rem;
+        position: absolute;
+        z-index: 30;
+        h1 {
+            font-size: 40px;
             font-weight: lighter;
-            font-size: 20px;
-            line-height: 30px;
-            width: 500px;
+            margin-bottom: 4rem;
         }
 
-        .my-skill-list {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 3px;
-
-            h2 {
-                grid-column: span 5;
-                font-weight: 300;
-                font-size: 18px;
-                letter-spacing: -1px;
+        .my-skill-front {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 4rem;
+            p {
+                font-weight: lighter;
+                font-size: 20px;
+                line-height: 30px;
+                width: 500px;
             }
 
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 140px;
-                height: 140px;
-                background-color: black;
-                gap: 10px;
+            .my-skill-list {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 5px;
 
-                h3 {
-                    color: white;
-                    font-size: 14px;
-                    font-weight: bold;
-                    letter-spacing: -0.4px;
+                h2 {
+                    grid-column: span 5;
+                    font-weight: 300;
+                    font-size: 18px;
+                    letter-spacing: -1px;
                 }
 
-                img {
-                    width: 70px;
-                    height: 70px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 140px;
+                    height: 140px;
+                    background-color: rgba(0, 0, 0, 0.759);
+                    border: 0.5px solid white;
+                    gap: 10px;
+
+                    h3 {
+                        color: white;
+                        font-size: 14px;
+                        font-weight: bold;
+                        letter-spacing: -0.4px;
+                    }
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
                 }
             }
+        }
+    }
+
+    .skill-moon {
+        position: relative;
+        inset: 0;
+        z-index: 20;
+        img{
+
+        width: 300px;
+        height: 300px;
         }
     }
 }
