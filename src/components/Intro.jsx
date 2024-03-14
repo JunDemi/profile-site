@@ -131,10 +131,8 @@ const Intro = () => {
             transition={{ delay: 1.8 }}
           />
         </motion.div>
-
         <motion.div className="bg-full" style={{ y: mountainY }} />
         <motion.div className="bg-mountain" style={{ y: backgroundY }} />
-        
         <div className="intro-buttons">
           <motion.div
             className="intro-text-radio"

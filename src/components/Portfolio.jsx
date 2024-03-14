@@ -2,6 +2,8 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import React, { useRef, useState } from "react";
 import { portfolioList } from "../Utils";
 import { Parallax } from "react-parallax";
+import { Link } from "react-router-dom";
+import PortfolioDetail from "./PortfolioDetail";
 
 const boxVar = {
   entry: (isBack) => ({
@@ -57,10 +59,14 @@ const Portfolio = () => {
   const [currentPage, set_currentPage] = useState(0);
   const [back, set_back] = useState(false);
   const [viewPage, set_viewPage] = useState(0);
+  const [overlay, set_overlay] = useState(false);
+
   const currentPageSet = (current) => {
     if (currentPage > current) {
       set_back(true);
+      set_viewPage(0);
     } else if (currentPage < current) {
+      set_viewPage(0);
       set_back(false);
     }
     set_currentPage(current);
@@ -84,7 +90,15 @@ const Portfolio = () => {
     //이전 버튼 클릭
     set_viewPage((prev) => (prev === 0 ? imgLength - 1 : prev - 1)); //이전 숫자로 변경하여 페이지 넘김
   };
+
+  const portfolioOverlay = () => {
+    set_overlay(true);
+  }
+  const overlayClose = () => {
+    set_overlay(false);
+  }
   return (
+    <>
     <div className="portfolio-container">
       <Parallax
         strength={350}
@@ -139,9 +153,7 @@ const Portfolio = () => {
                                     initial="entry"
                                     animate="center"
                                     exit="hide"
-                                    onClick={() =>
-                                      window.open(data.link, "_blank")
-                                    }
+                                    onClick={portfolioOverlay}
                                   />
                                 )
                             )}
@@ -181,7 +193,23 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <div className="portfolio-slide-text">
-                      <h2>{data.siteName}</h2>
+                      <div>
+                        <Link to={data.link} target="_blank">
+                          {data.siteName}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
                       <h3>{data.siteIntro}</h3>
                       <div className="portfolio-slide-stackImg">
                         {data.stackImg.map((img, num) => (
@@ -189,11 +217,10 @@ const Portfolio = () => {
                         ))}
                       </div>
                       <div className="feature-list">
-                        
-                      <h4>Feature</h4>
-                      {data.feature.map((text, num) => (
-                        <p key={num}>{text}</p>
-                      ))}
+                        <h4>Feature</h4>
+                        {data.feature.map((text, num) => (
+                          <p key={num}>{text}</p>
+                        ))}
                       </div>
                     </div>
                   </motion.div>
@@ -209,19 +236,27 @@ const Portfolio = () => {
         >
           {[...Array(portfolioList.length)].map((data, number) => (
             <>
-          <motion.button ref={ref2} onClick={() => currentPageSet(number)} key={number}
-          style={currentPage === number ? {
-           width: "50px",
-           height: "50px",
-           backgroundColor: "#fff",
-           color: "#000",
-           fontSize: "16px"
-          } : {}}
-         >{number + 1}</motion.button>
-          <hr />
-          </>
+              <motion.button
+                ref={ref2}
+                onClick={() => currentPageSet(number)}
+                key={number}
+                style={
+                  currentPage === number
+                    ? {
+                        width: "50px",
+                        height: "50px",
+                        backgroundColor: "#fff",
+                        color: "#000",
+                        fontSize: "16px",
+                      }
+                    : {}
+                }
+              >
+                {number + 1}
+              </motion.button>
+              <hr />
+            </>
           ))}
-        
         </motion.div>
         {/* <motion.div className="portfolio-slide-button"
         initial={{ opacity: 0 }}
@@ -281,6 +316,19 @@ const Portfolio = () => {
         </motion.div> */}
       </div>
     </div>
+
+    <AnimatePresence>
+      {overlay && 
+      <motion.div className="overlay-dark" onClick={overlayClose}
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+      >
+          <PortfolioDetail page={currentPage}/>
+      </motion.div>
+      }
+    </AnimatePresence>
+    </>
   );
 };
 
