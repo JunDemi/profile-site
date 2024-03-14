@@ -348,7 +348,6 @@
                 }
     
                 .portfolio-slide-text {
-                    max-width: 600px;
                     h2 {
                         font-weight: bold;
                         font-size: 24px;
@@ -359,17 +358,31 @@
                         font-size: 14px;
                         margin-top: 1rem;
                         line-height: 20px;
+                        max-width: 500px;
                     }
     
-                    h4 {
-                        font-size: 15px;
-                        font-weight: bold;
-                    }
-    
-                    p {
-                        margin: 1rem 0 0 1rem;
-                        font-size: 15px;
-                        font-weight: 200;
+                    
+                    .feature-list{
+                        border: 0.5px solid white;
+                        position: relative;
+                        margin-top: 2rem;
+                        margin-left: 10px;
+                        padding: 20px 10px;
+                        background-color: #000000ac;
+                        h4 {
+                            position: absolute;
+                            background-color: #060606;
+                            padding: 2px 8px;
+                            top: -10px;
+                            left: 10px;
+                            font-size: 15px;
+                            font-weight: bold;
+                        }
+                        p {
+                            margin: 1rem 0 0 1rem;
+                            font-size: 15px;
+                            font-weight: 200;
+                        }
                     }
     
                     .portfolio-slide-stackImg {
@@ -392,7 +405,8 @@
             position: absolute;
             z-index: 30;
             right: 2rem;
-            top: 30%;
+            top: 25%;
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             justify-content: center;

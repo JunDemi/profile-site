@@ -178,7 +178,7 @@ export const portfolioList = [
     "https://camo.githubusercontent.com/8ea312613ae2f44701fd5b6c099b485465760fd90dc2c462dc9ad78f701caf52/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e64204353532d3036423644343f7374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e64637373266c6f676f436f6c6f723d666666666666"  
     ],
     feature: [
-      "PlanetScale DB연동, Prisma로 CRUD 메소드 작성",
+      "PlanetScale DB연동, Prisma CRUD 메소드",
       "한국어/영어 언어 변경",
       "서버 사이드 렌더링을 통한 데이터 호출(ServerSide Props)",
       "참가자 목록 조회 및 공지작성을 위한 관리자 페이지 구현(전용 로그인)",
@@ -203,7 +203,7 @@ export const portfolioList = [
       "https://camo.githubusercontent.com/8ea312613ae2f44701fd5b6c099b485465760fd90dc2c462dc9ad78f701caf52/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e64204353532d3036423644343f7374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e64637373266c6f676f436f6c6f723d666666666666"
       ],
     feature: [
-      "PlanetScale DB연동, Prisma로 CRUD 메소드 작성",
+      "PlanetScale DB연동, Prisma CRUD 메소드",
       "한국어/영어 언어 변경",
       "서버 사이드 렌더링을 통한 데이터 호출(ServerSide Props)",
       "참가자 목록 조회 및 공지작성을 위한 관리자 페이지 구현(전용 로그인)",
@@ -231,9 +231,7 @@ export const portfolioList = [
       "8개 국어 지원",
       "소셜 로그인",
       "구독 결제 서비스",
-      "동영상 파일에 음향 마스터링, BGM 추가 기능",
-      "AI검색을 통한 자율적 옵션 선택",
-      "작업 파일 클라우드 저장 및 다운로드",
+      "동영상 파일에 음향 마스터링, BGM 추가 기능, AI검색 기능",
       "모바일 반응형"
     ],
     link: "https://surroundio.org/",

@@ -188,10 +188,13 @@ const Portfolio = () => {
                           <img key={num} src={img} alt="" />
                         ))}
                       </div>
+                      <div className="feature-list">
+                        
                       <h4>Feature</h4>
                       {data.feature.map((text, num) => (
                         <p key={num}>{text}</p>
                       ))}
+                      </div>
                     </div>
                   </motion.div>
                 )

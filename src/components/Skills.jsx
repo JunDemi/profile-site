@@ -5,9 +5,9 @@ const Skills = () => {
   const parallaxRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: parallaxRef,
-    offset: ["start start", "end start"],
+    offset: ["start center", "end start"],
   });
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "130%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
 
   const ref = useRef(null);
   const inview = useInView(ref, { once: true });
