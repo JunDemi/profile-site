@@ -530,7 +530,7 @@
     left: 0;
     z-index: 40;
     //background-color: #000000b6;
-    background-color: rgb(152, 152, 129);
+    background-color: rgba(0, 0, 0, 0.8);
     display: grid;
     place-items: center;
 }
@@ -551,8 +551,10 @@
         top: 118px;
         left: 50%;
         transform: translateX(-50%);
+        img{
         width: 830px;
         height: 520px;
+        }
     }
 }
 /*     Contact     */

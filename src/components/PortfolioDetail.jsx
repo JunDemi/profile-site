@@ -10,9 +10,10 @@ const PortfolioDetail = (page) => {
         src="/bg/macbook.png"
         alt=""
       />
+      <div className="macbook-view">
       <img
-      className="macbook-view"
        src="/the-market/themarket1.png" alt=""/>
+      </div>
     </motion.div>
   );
 };
