@@ -62,13 +62,13 @@ const Portfolio = () => {
   const [back, set_back] = useState(false);
   const [viewPage, set_viewPage] = useState(0);
   const [overlay, set_overlay] = useState(false);
+
   useEffect(()=> {
     if(pathname === ""){
       set_overlay(false);
     }else{
       set_overlay(true);
     }
-    console.log(pathname);
   }, [pathname]);
   const currentPageSet = (current) => {
     if (currentPage > current) {
@@ -324,7 +324,7 @@ const Portfolio = () => {
       </div>
     </div>
     {overlay && 
-      <PortfolioDetail page={currentPage} viewImg={portfolioList[currentPage].viewImg}/>
+     <PortfolioDetail pages={currentPage} viewImg={portfolioList[currentPage].viewImg}/>
     }
     </>
   );
