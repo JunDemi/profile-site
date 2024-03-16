@@ -260,7 +260,7 @@ const Portfolio = () => {
               <motion.hr initial={{ opacity: 0, scale: 0 }}
                 animate={inview ? {opacity: 1, scale: 1} : {opacity: 0, scale: 0}}
                 transition={{ delay: 0.8 + number / 10 * 1.5}}/>
-            </>
+                </>
           ))}
         </motion.div>
         {/* <motion.div className="portfolio-slide-button"
