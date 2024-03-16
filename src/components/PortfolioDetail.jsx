@@ -1,17 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useImgLoadStatus } from "../hooks/useImgLoadStatus";
 
 const PortfolioDetail = (props) => {
   const router = useNavigate();
-  const viewRef = useRef(null);
-  const isImgLoaded = useImgLoadStatus(
-    viewRef,
-    props.viewImg
-  );
-  
-  console.log(isImgLoaded);
+  const [viewPage, set_viewPage] = useState(0);
   return (
     <>
       <AnimatePresence>
@@ -31,44 +24,17 @@ const PortfolioDetail = (props) => {
               src="/bg/macbook.png"
               alt=""
             />
-            {isImgLoaded && (
-              <>
-                <img
-                  className="macbook-view"
-                  src={props.viewImg[1]}
-                  alt=""
-                  ref={viewRef}
-                />
-                <img
-                  className="macbook-view"
-                  src={props.viewImg[2]}
-                  alt=""
-                  ref={viewRef}
-                />
-                <img
-                  className="macbook-view"
-                  src={props.viewImg[3]}
-                  alt=""
-                  ref={viewRef}
-                />
-                <img
-                  className="macbook-view"
-                  src={props.viewImg[4]}
-                  alt=""
-                  ref={viewRef}
-                />
-              </>
+            {props.viewImg.map(
+              (data, number) =>
+                number === props.pages && (
+                  <img
+                    className="macbook-view"
+                    src={data}
+                    alt=""
+                    key={number}
+                  />
+                )
             )}
-            {
-              /* {props.viewImg ? (
-           props.viewImg.map((data, number) => (
-             <img className="macbook-view" src={data} alt="" key={number} />
-           ))
-         ) : (
-           
-         )} */
-              //모달이 될 때 잔렉이 발생하는 원인: 여러개의 이미지를 불러오기 때문
-            }
           </motion.div>
         </motion.div>
       </AnimatePresence>
