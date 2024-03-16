@@ -1,8 +1,8 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { portfolioList } from "../Utils";
 import { Parallax } from "react-parallax";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import PortfolioDetail from "./PortfolioDetail";
 
 const boxVar = {
@@ -54,13 +54,22 @@ const viewVar = {
   },
 };
 const Portfolio = () => {
+  const router = useNavigate();
+  const pathname = useLocation().pathname.replace("/", "");
   const ref2 = useRef(null);
   const inview = useInView(ref2, { once: true });
   const [currentPage, set_currentPage] = useState(0);
   const [back, set_back] = useState(false);
   const [viewPage, set_viewPage] = useState(0);
   const [overlay, set_overlay] = useState(false);
-
+  useEffect(()=> {
+    if(pathname === ""){
+      set_overlay(false);
+    }else{
+      set_overlay(true);
+    }
+    console.log(pathname);
+  }, [pathname]);
   const currentPageSet = (current) => {
     if (currentPage > current) {
       set_back(true);
@@ -90,13 +99,6 @@ const Portfolio = () => {
     //이전 버튼 클릭
     set_viewPage((prev) => (prev === 0 ? imgLength - 1 : prev - 1)); //이전 숫자로 변경하여 페이지 넘김
   };
-
-  const portfolioOverlay = () => {
-    set_overlay(true);
-  }
-  const overlayClose = () => {
-    set_overlay(false);
-  }
   return (
     <>
     <div className="portfolio-container">
@@ -156,7 +158,7 @@ const Portfolio = () => {
                                     initial="entry"
                                     animate="center"
                                     exit="hide"
-                                    onClick={portfolioOverlay}
+                                    onClick={()=>router(`/${portfolioList[page].siteName}`)}
                                   />
                                 )
                             )}
@@ -321,18 +323,9 @@ const Portfolio = () => {
         </motion.div> */}
       </div>
     </div>
-
-    <AnimatePresence>
-      {overlay && 
-      <motion.div className="overlay-dark" onClick={overlayClose}
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-      >
-          <PortfolioDetail page={currentPage}/>
-      </motion.div>
-      }
-    </AnimatePresence>
+    {overlay && 
+      <PortfolioDetail page={currentPage} viewImg={portfolioList[currentPage].viewImg}/>
+    }
     </>
   );
 };
