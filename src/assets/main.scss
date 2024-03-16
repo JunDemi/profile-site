@@ -530,31 +530,51 @@
     left: 0;
     z-index: 40;
     //background-color: #000000b6;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000;
     display: grid;
     place-items: center;
+    .portfolio-modal{
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+        position: relative;
+        .macbook-device{
+            width: 1080px;
+            margin-top: 10px;
+        }
+        .macbook-view{
+            position: absolute;
+            top: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 830px;
+            height: 520px;
+        }
+    }
+    .close_btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .prev_btn{
+        position: absolute;
+        top: 40%;
+        left: 150px;
+    }
+    .next_btn{
+        position: absolute;
+        top: 40%;
+        right: 150px;
+    }
+}
+.detail-slide-button{
+   position: absolute;
+   bottom: 0;
+
 }
 
-.portfolio-modal{
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-    position: relative;
-    .macbook-device{
-        width: 1080px;
-        margin-top: 80px;
-    }
-    .macbook-view{
-        position: absolute;
-        top: 118px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 830px;
-        height: 520px;
-    }
-}
 /*     Contact     */
 .contact-container {
     .contact-section {

@@ -324,7 +324,17 @@ const Portfolio = () => {
       </div>
     </div>
     {overlay && 
+    
+    <AnimatePresence>
+    <motion.div
+      className="overlay-dark"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
      <PortfolioDetail pages={currentPage} viewImg={portfolioList[currentPage].viewImg}/>
+     </motion.div>
+     </AnimatePresence>
     }
     </>
   );
