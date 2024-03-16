@@ -6,9 +6,7 @@ const PortfolioDetail = (page) => {
   return (
     <motion.div className="portfolio-modal" layoutId={`macbook${page.page}`}>
       <motion.img className="macbook-device" src="/bg/macbook.png" alt="" />
-      {portfolioList[page].viewImg.map((src, number) => (
-        <img key={number} className="macbook-view" src={src} alt="" />
-      ))}
+      <iframe className="macbook-view" title={portfolioList[page.page].link} frameborder="0" src={portfolioList[page.page].link}>로딩 불가 메세지</iframe>
     </motion.div>
   );
 };
