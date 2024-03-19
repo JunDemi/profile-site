@@ -490,7 +490,11 @@
         width: 40px;
         height: 40px;
     }
-
+    .pagebtn{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     .portfolio-modal {
         height: 100dvh;
         display: flex;
@@ -518,7 +522,9 @@
 
 .detail-slide-button {
     position: absolute;
+    left: 50%;
     bottom: 3rem;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;

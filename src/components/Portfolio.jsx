@@ -144,7 +144,7 @@ const Portfolio = () => {
                                       initial="entry"
                                       animate="center"
                                       exit="hide"
-                                      onClick={() => getOverlay(data.siteName)}
+                                      onClick={() => getOverlay(page)}
                                     />
                                   )
                               )}
@@ -255,62 +255,6 @@ const Portfolio = () => {
               </>
             ))}
           </motion.div>
-          {/* <motion.div className="portfolio-slide-button"
-        initial={{ opacity: 0 }}
-        animate={inview ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ delay: 0.3, ease: "easeOut" }}>
-          <motion.div
-            className="portfolio-slider-button-prev"
-            onClick={() => prevCard(portfolioList.length)}
-            initial={{ y: 0 }}
-            whileTap={{ y: -8 }}
-          >
-            Prev
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 18.75 7.5-7.5 7.5 7.5"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 12.75 7.5-7.5 7.5 7.5"
-              />
-            </svg>
-          </motion.div>
-          <div className="portfolio-slide-number">
-            {currentPage + 1} / {portfolioList.length}
-          </div>
-          <motion.div
-            className="portfolio-slider-button-next"
-            onClick={() => nextCard(portfolioList.length)}
-            initial={{ y: 0 }}
-            whileTap={{ y: 8 }}
-            ref={ref2}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-              />
-            </svg>
-            Next
-          </motion.div>
-        </motion.div> */}
         </div>
       </div>
       <AnimatePresence>
@@ -336,11 +280,7 @@ const Portfolio = () => {
                   d="M6 18 18 6M6 6l12 12"
                 />
               </motion.svg>
-            <PortfolioDetail
-              pages={currentPage}
-              viewImg={portfolioList[currentPage].viewImg}
-              link={portfolioList[currentPage].link}
-            />
+            <PortfolioDetail data={portfolioList}/>
           </motion.div>
         )}
       </AnimatePresence>
