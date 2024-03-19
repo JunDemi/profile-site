@@ -1,7 +1,29 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import { portfolioList } from "../Utils";
 import { useLocation, useNavigate } from "react-router-dom";
+
+const pageVar = {
+  entry: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      delay: 0.5,
+    },
+  },
+  center: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      delay: 0.5,
+    },
+  },
+  hide: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
 const viewVar = {
   entry: {
     opacity: 0,
@@ -27,11 +49,12 @@ const PortfolioDetail = (prop) => {
   const pathname = useLocation().pathname.replace("/", "");
   const [viewPage, set_viewPage] = useState(0);
   const nextPage = (pageLength) => {
-    router(`/${pathname === pageLength - 1 ? 0 : pathname + 1}`);
     set_viewPage(0);
+    router(
+      `/${Number(pathname) === pageLength - 1 ? 0 : Number(pathname) + 1}`
+    );
   };
   const prevPage = (pageLength) => {
-    //이전 버튼 클릭
     set_viewPage(0); //이전 숫자로 변경하여 페이지 넘김
     router(
       `/${Number(pathname) === 0 ? pageLength - 1 : Number(pathname) - 1}`
@@ -47,14 +70,58 @@ const PortfolioDetail = (prop) => {
   };
   return (
     <>
-      {pathname && (
+      {pathname ? (
         <>
-          <button onClick={() => prevPage(prop.data.length)}>prevPage</button>
+          <motion.button
+            className="detail-page-btn prev"
+            onClick={() => prevPage(prop.data.length)}
+            whileHover={{x: -5}}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+          </motion.button>
+          <motion.button
+            className="detail-page-btn next"
+            onClick={() => nextPage(prop.data.length)}
+            whileHover={{x: 5}}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </motion.button>
+          <div className="detail-current-page">
+            <p>{Number(pathname) + 1}</p>
+            <p>{prop.data.length}</p>
+          </div>
           <AnimatePresence mode="sync">
             {prop.data.map(
               (pageData, pageNumber) =>
                 pageNumber === Number(pathname) && (
-                  <div className="modal-container" key={pageNumber}>
+                  <motion.div
+                    className="modal-container"
+                    key={pageNumber}
+                    variants={pageVar}
+                    initial="entry"
+                    animate="center"
+                    exit="hide"
+                  >
                     <motion.div className="portfolio-modal">
                       <motion.img
                         className="macbook-device"
@@ -109,8 +176,8 @@ const PortfolioDetail = (prop) => {
                           onClick={() => set_viewPage(num)}
                           animate={
                             viewPage === num
-                              ? { width: "100px" }
-                              : { width: "60px" }
+                              ? { width: "100px", border: "3px solid #64f0fa" }
+                              : { width: "60px", border: "3px solid #ffffff00" }
                           }
                         />
                       ))}
@@ -133,11 +200,13 @@ const PortfolioDetail = (prop) => {
                         </svg>
                       </motion.button>
                     </div>
-                  </div>
+                  </motion.div>
                 )
             )}
           </AnimatePresence>
         </>
+      ) : (
+        <img src="/bg/full.png" alt="" width="100px" />
       )}
     </>
   );
