@@ -1,8 +1,8 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { portfolioList } from "../Utils";
 import { Parallax } from "react-parallax";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import PortfolioDetail from "./PortfolioDetail";
 
 const boxVar = {
@@ -54,6 +54,7 @@ const viewVar = {
   },
 };
 const Portfolio = () => {
+  const pathname = useLocation().pathname.replace("/", "");
   const router = useNavigate();
   const ref2 = useRef(null);
   const inview = useInView(ref2, { once: true });
@@ -88,6 +89,14 @@ const Portfolio = () => {
     set_overlay(false);
     router("/");
   };
+
+  useEffect(()=> {
+    if(pathname === ""){
+      set_overlay(false);
+    }else{
+      set_overlay(true);
+    }
+  },[pathname]);
   return (
     <>
       <div className="portfolio-container">
