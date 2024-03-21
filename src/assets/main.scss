@@ -12,7 +12,11 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background-image: url("../../public/bg/full.png");
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0)
+          ),
+          url("../../public/bg/full.png");
         background-position: bottom;
         background-size: cover;
     }
@@ -165,10 +169,6 @@
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
-    background-image: url('../../public/bg/skillbg.jpeg');
-    background-position: bottom;
-    background-size: cover;
-    background-attachment: fixed;
 
     .skill-bg {
         position: absolute;

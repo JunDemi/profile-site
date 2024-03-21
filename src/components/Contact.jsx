@@ -5,7 +5,6 @@ import Footer from "./Footer";
 const Contact = () => {
   return (
     <Parallax
-      className="contact-container"
       strength={300}
       bgImage={"/bg/sky.jpeg"}
     >

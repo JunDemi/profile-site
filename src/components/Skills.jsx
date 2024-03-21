@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { stackBack, stackFront } from "../Utils";
+import { Parallax } from "react-parallax";
 const Skills = () => {
   const parallaxRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -14,6 +15,9 @@ const Skills = () => {
   const ref2 = useRef(null);
   const inview2 = useInView(ref2, { once: true });
   return (
+    <Parallax
+    strength={380}
+    bgImage={"/bg/skillbg.jpeg"}>
     <div className="my-skill" ref={parallaxRef}>
       <div className="skill-content">
         <motion.h1
@@ -93,6 +97,7 @@ const Skills = () => {
       </motion.div>
       <div className="skill-bg"/>
     </div>
+    </Parallax>
   );
 };
 export default Skills;
