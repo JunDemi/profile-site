@@ -441,34 +441,38 @@
             justify-content: center;
             align-items: center;
             width: 50px;
-            div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .progress-line {
-                border: none;
-                background-color: #a7a7a7;
-                width: 0.5px;
-                height: 40px;
-                margin: 0;
-                &.number6 {
-                    display: none;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .progress-line {
+                    border: none;
+                    background-color: #a7a7a7;
+                    width: 0.5px;
+                    height: 40px;
+                    margin: 0;
+
+                    &.number6 {
+                        display: none;
+                    }
+                }
+
+                button {
+                    cursor: pointer;
+                    background: none;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    color: white;
+                    width: 25px;
+                    height: 25px;
+                    font-size: 13px;
+                    transition: all .3s;
                 }
             }
-            button {
-                cursor: pointer;
-                background: none;
-                border: 1px solid white;
-                border-radius: 50%;
-                color: white;
-                width: 25px;
-                height: 25px;
-                font-size: 13px;
-                transition: all .3s;
-            }
-            }
-           
+
         }
     }
 
@@ -490,35 +494,42 @@
         position: absolute;
         top: 1rem;
         right: 1rem;
-        cursor: pointer; stroke: #fff;
+        cursor: pointer;
+        stroke: #fff;
         width: 40px;
         height: 40px;
     }
-    .pagebtn{
+
+    .pagebtn {
         position: absolute;
         top: 0;
         left: 0;
     }
-    .detail-page-btn{
+
+    .detail-page-btn {
         position: absolute;
         top: 40%;
         background: none;
         border: none;
         cursor: pointer;
-        svg{
+
+        svg {
             stroke: white;
             stroke-width: 1;
             width: 130px;
             height: 100px;
         }
-        &.prev{
+
+        &.prev {
             left: 4rem;
         }
-        &.next{
+
+        &.next {
             right: 4rem;
         }
     }
-    .detail-current-page{
+
+    .detail-current-page {
         position: absolute;
         top: 15px;
         font-size: 13px;
@@ -529,15 +540,18 @@
         background-color: #ffffff;
         overflow: hidden;
         border-radius: 30px;
-        p{
+
+        p {
             width: 40px;
             padding: 3px 0 2px 0;
-            &:first-child{
+
+            &:first-child {
                 background-color: #000;
                 color: white;
             }
         }
     }
+
     .portfolio-modal {
         height: 100dvh;
         display: flex;
@@ -577,11 +591,13 @@
         height: 60px;
         cursor: pointer;
     }
-    button{
+
+    button {
         background: none;
         border: none;
         cursor: pointer;
-        svg{
+
+        svg {
             stroke: #d0d0d0;
             stroke-width: 1px;
             width: 40px;
@@ -590,13 +606,23 @@
     }
 }
 
-/*     Contact     */
-.contact-container {
-    .contact-section {
-        height: 100dvh;
+/*     Contact & Footer    */
+.contact-section {
+    position: relative;
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    align-items: flex-end;
+    .bg-stars{
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background-image: url("../../public/bg/stars.png");
+        background-position: bottom;
+        background-size: cover;
     }
-
     .footer {
+        width: 100%;
         border-top: 0.5px solid #c1c1c160;
         padding: 3rem;
         font-size: 14px;
@@ -604,5 +630,3 @@
         color: #b9b9b9;
     }
 }
-
-/*     footer     */

@@ -6,11 +6,12 @@ const Contact = () => {
   return (
     <Parallax
       className="contact-container"
-      strength={-600}
-      bgImage={"https://res.cloudinary.com/dgmgeotyk/image/upload/f_auto,q_auto/v1/Wings/o0wyh5p9c1qvexvhrmtm"}
+      strength={300}
+      bgImage={"/bg/sky.jpeg"}
     >
-        <div className="contact-section"></div>
-        <Footer/>
+        <div className="contact-section">
+          <div className="bg-stars"/>
+        </div>
     </Parallax>
   );
 };
