@@ -228,9 +228,9 @@ const Portfolio = () => {
               )}
             </AnimatePresence>
           </motion.div>
-          <motion.div className="slide-progress-bar">
+          <motion.div className="slide-progress-bar" >
             {[...Array(portfolioList.length)].map((data, number) => (
-              <>
+              <div key={number}>
                 <motion.button
                   ref={ref2}
                   onClick={() => currentPageSet(number)}
@@ -255,13 +255,14 @@ const Portfolio = () => {
                   {number + 1}
                 </motion.button>
                 <motion.hr
+                className={`progress-line number${number}`}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={
                     inview ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }
                   }
                   transition={{ delay: 0.8 + (number / 10) * 1.5 }}
                 />
-              </>
+              </div>
             ))}
           </motion.div>
         </div>

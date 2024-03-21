@@ -441,19 +441,21 @@
             justify-content: center;
             align-items: center;
             width: 50px;
-
-            hr {
+            div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .progress-line {
                 border: none;
                 background-color: #a7a7a7;
                 width: 0.5px;
                 height: 40px;
                 margin: 0;
-
-                &:last-child {
+                &.number6 {
                     display: none;
                 }
             }
-
             button {
                 cursor: pointer;
                 background: none;
@@ -465,6 +467,8 @@
                 font-size: 13px;
                 transition: all .3s;
             }
+            }
+           
         }
     }
 
