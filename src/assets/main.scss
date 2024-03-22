@@ -12,18 +12,26 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.9),
-                rgba(0, 0, 0, 0)),
-            url("../../public/bg/full.png");
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+        //         rgba(0, 0, 0, 0)),
+        //         url("../../public/bg/구름4.png");
+        background-image: url("../../public/bg/구름4.png");
         background-position: bottom;
         background-size: cover;
     }
-
     .bg-mountain {
         position: absolute;
         inset: 0;
-        z-index: 20;
-        background-image: url("../../public/bg/mountain.png");
+        z-index: 15;
+        background-image: url("../../public/bg/구름1.png");
+        background-position: bottom;
+        background-size: cover;
+    }
+    .bg-mountain1 {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background-image: url("../../public/bg/구름2.png");
         background-position: bottom;
         background-size: cover;
     }
@@ -32,11 +40,10 @@
         padding: 13rem 7rem 0 7rem;
         width: 100%;
         position: relative;
-        z-index: 10;
+        z-index: 14;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        color: white;
 
         .intro-left {
             .intro-name {
@@ -59,6 +66,8 @@
             img {
                 width: 130px;
                 height: 130px;
+                border: 4px solid #dffbff;
+                border-radius: 50%;
             }
 
             .intro-text-container {
@@ -79,8 +88,9 @@
         }
 
         .intro-moon {
-            width: 150px;
-            height: 150px;
+            z-index: -1;
+            width: 200px;
+            height: 200px;
         }
     }
 
@@ -99,7 +109,7 @@
 
             button {
                 cursor: pointer;
-                border: 1px solid white;
+                border: 1px solid black;
                 border-radius: 50%;
                 width: 10px;
                 height: 10px;
@@ -118,7 +128,7 @@
                 svg {
                     width: 30px;
                     height: 30px;
-                    stroke: white;
+                    stroke: black;
                 }
             }
         }
@@ -135,12 +145,12 @@
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-                color: #fff;
+                color: #000;
                 font-size: 13px;
                 font-weight: bold;
 
                 svg {
-                    fill: #ffffff;
+                    fill: #000;
                     width: 38px;
                     height: 38px;
                 }
@@ -150,7 +160,7 @@
                 border: none;
                 width: 1px;
                 height: 35px;
-                background-color: #fff;
+                background-color: #000;
                 margin: 0;
             }
         }
