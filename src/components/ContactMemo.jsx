@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { createMemo, readMemo } from "../firebase/fbContents";
 import { AnimatePresence, motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import { datetimeFormat } from "../Utils";
+import { compareTimeFormat, datetimeFormat } from "../Utils";
 
 const ContactMemo = () => {
   const { handleSubmit, register, reset } = useForm({ mode: "onSubmit" });
@@ -66,7 +66,7 @@ const ContactMemo = () => {
                   onClick={() => openMemoDetail(memo.memo)}
                 >
                   <p>{memo.memoInfo.message.length > 20 ? memo.memoInfo.message.slice(0, 30) + "...": memo.memoInfo.message}</p>
-                  <p>{datetimeFormat(memo.memoInfo.date)}</p>
+                  <p>{compareTimeFormat(memo.memoInfo.date)}</p>
                   <AnimatePresence>
                   {memo.memo === memoDetail && (
                     <motion.div className="memo-detail"
