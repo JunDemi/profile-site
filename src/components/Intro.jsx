@@ -6,7 +6,6 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { introduceText } from "../Utils";
-import { Parallax } from "react-parallax";
 const boxVar = {
   entry: (isBack) => ({
     x: isBack ? -360 : 360,
