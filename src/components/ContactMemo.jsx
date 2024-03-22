@@ -73,9 +73,9 @@ const ContactMemo = () => {
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}
+                    layoutId="memos"
                     >
                         <h4>작성일: {datetimeFormat(memo.memoInfo.date)}</h4>
-                        <hr/>
                         <textarea defaultValue={memo.memoInfo.message} readOnly/>
                     </motion.div>
                   )}
