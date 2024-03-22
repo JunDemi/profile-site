@@ -6,6 +6,7 @@ span,
 applet,
 object,
 iframe,
+hr,
 h1,
 h2,
 h3,
@@ -131,7 +132,7 @@ table {
 	border-spacing: 0;
 }
 
-input:focus {
+input:focus, textarea:focus {
 	outline: none;
 }
 

@@ -237,3 +237,14 @@ export const portfolioList = [
     link: "https://surroundio.org/",
   },
 ];
+export const datetimeFormat = (millisecond) => {
+ //밀리초를 yyyy-mm-dd로 포맷
+ const currentDate = new Date(millisecond);
+ const year = currentDate.getFullYear();
+ const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+ const day = String(currentDate.getDate()).padStart(2, '0');
+ return `${year}-${month}-${day}`;
+}
+export const compareTimeFormat = (millisecond) => {
+  
+}

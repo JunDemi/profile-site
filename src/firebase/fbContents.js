@@ -1,111 +1,23 @@
-const sampleList = [
-    {
-      name: "정욱",
-      text: "안녕하세요1",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요2",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요3",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요4",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요5",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요6",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요7",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요8",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요9",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요10",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요11",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요12",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요13",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요14",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요15",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요16",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요17",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요18",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요19",
-      date: "2024-01-01",
-    },
-    {
-      name: "정욱",
-      text: "안녕하세요20",
-      date: "2024-01-01",
-    },
+import { addDoc, collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "./fbConnection";
 
-    {
-      name: "정욱",
-      text: "안녕하세요21",
-      date: "2024-01-01",
-    },
-  ];
-export const readMemo = () => {
-    return sampleList;
+const memoRef = collection(db, "memos");
+
+export const readMemo = async () => {
+  const resultArray = [];
+  const memoQuery = query(memoRef, orderBy("date", "desc"));
+  const result = await getDocs(memoQuery);
+  result.docs.map((data) => {
+    resultArray.push({ memo: data.id, memoInfo: data.data() });
+  });
+  return resultArray;
+};
+
+
+export const createMemo = async (input) => {
+  //DB추가
+  await addDoc(collection(db, "memos"), {
+    message: input.message,
+    date: Date.now(),
+  });
 };
