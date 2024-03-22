@@ -622,7 +622,7 @@
     .contact-me {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         margin: 0 7rem;
         .contact-info {
             border: 0.5px solid white;

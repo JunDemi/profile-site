@@ -1,8 +1,12 @@
-import React from "react";
-
-const sampleList = [1, 2, 3, 4, 5];
+import React, { useState } from "react";
+import { useQuery } from "react-query";
+import { readMemo } from "../firebase/fbContents";
 
 const ContactMemo = () => {
+  const { isLoading, data, refetch } = useQuery(["memo-list"], () =>
+    readMemo()
+  );
+  const [page, set_page] = useState(0);
   return (
     <div className="contact-memo">
       <h1>간단한 메모 남겨주세요...</h1>
@@ -12,25 +16,29 @@ const ContactMemo = () => {
         <button>등록</button>
       </form>
 
-      <div className="memo-list">
-        {sampleList.length === 0 ? (
-          <div>등록된 메모가 없습니다.</div>
-        ) : (
-          sampleList.map((d, n) => (
-            <div>
-              <p>안녕하세요!</p>
-              <p>2024-01-01</p>
-            </div>
-          ))
-        )}
-      </div>
-      <div className="memo-list-paging">
-        <span style={{ color: "slateblue" }}>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-      </div>
+      {!isLoading ? (
+        <>
+          <div className="memo-list">
+            {data.length === 0 ? (
+              <div>등록된 메모가 없습니다.</div>
+            ) : (
+              data.slice(page * 5, page * 5 + 5).map((d, n) => (
+                <div key={n}>
+                  <p>{d.text}</p>
+                  <p>{d.date}</p>
+                </div>
+              ))
+            )}
+          </div>
+          <div className="memo-list-paging">
+            {[...Array(Math.ceil(data.length / 5))].map((d, n) => (
+              <span key={n} onClick={() => set_page(n)}>{n + 1}</span>
+            ))}
+          </div>
+        </>
+      ) : (
+        "로딩중"
+      )}
     </div>
   );
 };
