@@ -253,6 +253,7 @@
 
 /*     portfolio     */
 .portfolio-container {
+    overflow-x: hidden;
     position: relative;
     color: white;
     height: 100dvh;
@@ -607,7 +608,7 @@
 /*     Contact & Footer    */
 .contact-section {
     position: relative;
-    height: 100dvh;
+    height: 130dvh;
     width: 100%;
     overflow: hidden;
     color: white;
@@ -621,10 +622,11 @@
     .contact-me {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 0 7rem;
         .contact-info {
             border: 0.5px solid white;
-            padding: 0 3rem;
+            padding: 0 6rem;
             z-index: 11;
             div {
                 margin: 3rem 0;
@@ -643,8 +645,73 @@
             }
         }
         .contact-memo{
+            color: black;
             z-index: 11;
             background-color: white;
+            padding: 1.5rem;
+            h1{
+                font-size: 13px;
+                color: #787878;
+                font-weight: 600;
+            }
+            .memo-form{
+                margin: 3rem 0;
+                display: grid;
+                gap:30px;
+                input[type=text]{
+                    border: none;
+                    font-size: 15px;
+                    padding: 6px 0;
+                    border-bottom: 2px solid #899db1;
+                    width: 400px;
+                    transition: all .2s;
+                    &:focus{
+                        border-color: slateblue;
+                        letter-spacing: 1px;
+                        &::placeholder{
+                            color: black;
+                        }
+                    }
+                }
+                button{
+                    border: none;
+                    background-color: slateblue;
+                    border-radius: 5px;
+                    color: white;
+                    width: 100px;
+                    padding: 10px 0;
+                    cursor: pointer;
+                    transition: all .2s;
+                    &:hover{
+                        background-color: #5347a4;
+                    }
+                }
+            }
+            .memo-list{
+                background-color: whitesmoke;
+                border: 2px solid slateblue;
+                font-size: 13px;
+                div{
+                    display: flex;
+                    color: #686868;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 18px 10px;
+                    transition: all .2s;
+                    &:hover{
+                        background-color: #e4e4e4;
+                    }
+                }
+            }
+            .memo-list-paging{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+                gap: 10px;
+                color: #8c8c8c;
+                font-weight: bold;
+            }
         }
     }
 
