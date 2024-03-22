@@ -12,11 +12,9 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 0)
-          ),
-          url("../../public/bg/full.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9),
+                rgba(0, 0, 0, 0)),
+            url("../../public/bg/full.png");
         background-position: bottom;
         background-size: cover;
     }
@@ -609,12 +607,48 @@
 /*     Contact & Footer    */
 .contact-section {
     position: relative;
-    height: 130dvh;
+    height: 100dvh;
     width: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    .bg-stars{
+    color: white;
+
+    .contact-title {
+        margin: 5rem 0 5rem 7rem;
+        font-size: 40px;
+        font-weight: lighter;
+    }
+
+    .contact-me {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 7rem;
+        .contact-info {
+            border: 0.5px solid white;
+            padding: 0 3rem;
+            z-index: 11;
+            div {
+                margin: 3rem 0;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 17px;
+                font-weight: 200;
+                letter-spacing: -1px;
+                svg {
+                    stroke: white;
+                    stroke-width: 1.5px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        .contact-memo{
+            z-index: 11;
+            background-color: white;
+        }
+    }
+
+    .bg-stars {
         position: absolute;
         inset: 0;
         z-index: 10;
@@ -622,7 +656,10 @@
         background-position: bottom;
         background-size: cover;
     }
+
     .footer {
+        position: absolute;
+        bottom: 0;
         width: 100%;
         border-top: 0.5px solid #c1c1c160;
         padding: 3rem;
