@@ -768,13 +768,34 @@
     }
 
     .footer {
+        z-index: 11;
         position: absolute;
+        left: 0;
         bottom: 0;
-        width: 100%;
+        width: 100dvw;
         border-top: 0.5px solid #c1c1c160;
         padding: 3rem;
         font-size: 14px;
         font-weight: 200;
         color: #b9b9b9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer-links{
+        padding-right: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+            svg{
+                fill: #c5c5c5;
+                width: 40px;
+                height: 40px;
+                transition: all .2s;
+                &:hover{
+                    fill: white;
+                }
+            }
+        }
     }
 }
