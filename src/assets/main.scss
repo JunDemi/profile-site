@@ -110,13 +110,16 @@
 
             button {
                 cursor: pointer;
-                border: 1px solid black;
+                border: none;
                 border-radius: 50%;
-                width: 10px;
-                height: 10px;
+                width: 20px;
+                height: 20px;
                 padding: 5px;
                 background: none;
                 transition: all .2s;
+                background-color: white;
+                box-shadow: 3px 3px rgba(0,0,0,0.2);
+                
             }
 
             span {
@@ -125,11 +128,15 @@
                 justify-content: center;
                 align-items: center;
                 margin-left: 20px;
-
+                padding: 8px;
+                background-color: white;
+                box-shadow: 3px 3px rgba(0,0,0,0.2);
+                border-radius: 50%;
                 svg {
-                    width: 30px;
-                    height: 30px;
-                    stroke: black;
+                    width: 25px;
+                    height: 25px;
+                    stroke: #00c3ff;
+                    stroke-width: 2px;
                 }
             }
         }
