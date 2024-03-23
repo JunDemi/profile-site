@@ -102,11 +102,12 @@ const Portfolio = () => {
       <div className="portfolio-container">
         <Parallax
           strength={350}
-          bgImage="/bg/portfoliobg.png"
+          bgImage="/bg/greenblue.jpeg"
           className="portfolio-bg"
         />
         <div className="portfolio-content">
           <motion.h1
+          className="cloud-title"
             initial={{ opacity: 0, x: -100 }}
             animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
             transition={{ delay: 0.3, ease: "easeOut" }}

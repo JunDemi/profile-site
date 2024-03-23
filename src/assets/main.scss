@@ -19,6 +19,7 @@
         background-position: bottom;
         background-size: cover;
     }
+
     .bg-mountain {
         position: absolute;
         inset: 0;
@@ -27,6 +28,7 @@
         background-position: bottom;
         background-size: cover;
     }
+
     .bg-mountain1 {
         position: absolute;
         inset: 0;
@@ -189,41 +191,41 @@
         z-index: 30;
 
         h1 {
-            font-size: 40px;
-            font-weight: lighter;
             margin-bottom: 4rem;
-            background-color: white;
-            width: 150px;
-            text-align: center;
-            border-radius: 50px;
-            padding: 2px 15px;
         }
 
         .my-skill-front {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: flex-end;
             gap: 4rem;
 
             p {
-                font-weight: lighter;
-                font-size: 20px;
+                background-color: white;
+                border-radius: 10px;
+                padding: 1rem;
+                font-size: 17px;
                 line-height: 30px;
-                width: 500px;
+                width: 450px;
+                height: 100%;
             }
 
             .my-skill-list {
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 gap: 5px;
-
                 h2 {
-                    grid-column: span 5;
-                    font-weight: 300;
-                    font-size: 18px;
-                    letter-spacing: -1px;
+                    font-family: "SUITE-bold";
+                    font-size: 15px;
+                    letter-spacing: -0.5px;
+                    background-color: white;
+                    text-align: center;
+                    border-radius: 30px;
+                    padding: 3px 0;
                 }
-
+                span{
+                    grid-column: span 4;
+                }
                 div {
                     display: flex;
                     flex-direction: column;
@@ -258,7 +260,7 @@
 
         img {
 
-            width: 300px;
+            width: 450px;
             height: 300px;
         }
     }
@@ -268,7 +270,6 @@
 .portfolio-container {
     overflow-x: hidden;
     position: relative;
-    color: white;
     height: 100dvh;
 
     .portfolio-bg {
@@ -287,6 +288,8 @@
         }
 
         .portfolio-slider {
+
+    color: white;
             margin: 5rem 0 0 3rem;
             position: relative;
             height: 400px;
@@ -637,10 +640,12 @@
         justify-content: space-between;
         align-items: flex-start;
         margin: 0 7rem;
+
         .contact-info {
             border: 0.5px solid white;
             padding: 0 6rem;
             z-index: 11;
+
             div {
                 margin: 3rem 0;
                 display: flex;
@@ -649,6 +654,7 @@
                 font-size: 17px;
                 font-weight: 200;
                 letter-spacing: -1px;
+
                 svg {
                     stroke: white;
                     stroke-width: 1.5px;
@@ -657,22 +663,26 @@
                 }
             }
         }
-        .contact-memo{
+
+        .contact-memo {
             color: black;
             z-index: 11;
             background-color: white;
             padding: 1.5rem;
-            h1{
+
+            h1 {
                 font-size: 13px;
                 color: #787878;
                 font-weight: 600;
             }
-            .memo-form{
+
+            .memo-form {
                 margin: 2rem 0 15px 0;
                 display: flex;
                 align-items: flex-start;
-                gap:5px;
-                textarea{
+                gap: 5px;
+
+                textarea {
                     font-family: Arial, Helvetica, sans-serif;
                     font-size: 15px;
                     border: 2px solid #899db1;
@@ -680,15 +690,18 @@
                     width: 400px;
                     height: 52px;
                     transition: all .2s;
-                    &:focus{
+
+                    &:focus {
                         border-color: #6a5acd;
                         letter-spacing: 1px;
-                        &::placeholder{
+
+                        &::placeholder {
                             color: black;
                         }
                     }
                 }
-                button{
+
+                button {
                     border: none;
                     border-radius: 5px;
                     color: white;
@@ -698,21 +711,25 @@
                     cursor: pointer;
                     transition: all .2s;
                     font-size: 35px;
-                    &:hover{
+
+                    &:hover {
                         background-color: #5347a4;
                     }
                 }
             }
-            .memo-list{
+
+            .memo-list {
                 background-color: whitesmoke;
                 border: 2px solid #6a5acd;
                 font-size: 13px;
-                h5{
+
+                h5 {
                     color: #686868;
                     padding: 18px 10px;
                     text-align: center;
                 }
-                .memo-object{
+
+                .memo-object {
                     position: relative;
                     cursor: pointer;
                     display: flex;
@@ -721,10 +738,12 @@
                     align-items: center;
                     padding: 18px 10px;
                     transition: all .2s;
-                    &:hover{
+
+                    &:hover {
                         background-color: #e4e4e4;
                     }
-                    .memo-detail{
+
+                    .memo-detail {
                         position: absolute;
                         width: 300px;
                         border: 2px solid #6a5acd;
@@ -732,13 +751,15 @@
                         bottom: 0;
                         left: -310px;
                         overflow: hidden;
-                        h4{
+
+                        h4 {
                             padding: 10px 15px;
                             font-size: 12px;
                             background-color: #6a5acd;
                             color: white;
                         }
-                        textarea{
+
+                        textarea {
                             font-size: 14px;
                             cursor: pointer;
                             color: #686868;
@@ -751,13 +772,15 @@
                     }
                 }
             }
-            .memo-list-paging{
+
+            .memo-list-paging {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-top: 1.5rem;
                 gap: 10px;
-                span{
+
+                span {
                     cursor: pointer;
                     border-radius: 50%;
                     display: grid;
@@ -794,21 +817,35 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .footer-links{
-        padding-right: 8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-            svg{
+
+        .footer-links {
+            padding-right: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            svg {
                 fill: #c5c5c5;
                 width: 40px;
                 height: 40px;
                 transition: all .2s;
-                &:hover{
+
+                &:hover {
                     fill: white;
                 }
             }
         }
     }
+}
+
+/* 구름 모양 */
+.cloud-title {
+    font-size: 40px;
+    background-color: white;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px 15px;
 }

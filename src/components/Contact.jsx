@@ -15,7 +15,7 @@ const Contact = () => {
   });
   const starY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   return (
-    <Parallax strength={300} bgImage={"/bg/sky.jpeg"}>
+    <Parallax strength={300} bgImage={"/bg/purple.jpeg"}>
       <div className="contact-section" ref={parallaxRef}>
         <h1 className="contact-title">Contact</h1>
         <div className="contact-me">

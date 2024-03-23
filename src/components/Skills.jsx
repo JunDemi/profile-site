@@ -21,6 +21,7 @@ const Skills = () => {
     <div className="my-skill" ref={parallaxRef}>
       <div className="skill-content">
         <motion.h1
+        className="cloud-title"
           initial={{ opacity: 0, x: -100 }}
           animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
           transition={{ delay: 0.3, ease: "easeOut" }}
@@ -40,7 +41,7 @@ const Skills = () => {
             perferendis in excepturi nobis.
           </p>
           <div className="my-skill-list">
-            <h2>Front End</h2>
+            <h2>Front End</h2><span/>
             {stackFront.map((data, number) => (
               <motion.div
                 key={number}
@@ -72,7 +73,7 @@ const Skills = () => {
             perferendis in excepturi nobis.
           </p>
           <div className="my-skill-list">
-            <h2>Database & Storage</h2>
+            <h2>DB & Storage</h2><span/>
             {stackBack.map((data, number) => (
               <motion.div
                 key={number}
@@ -93,7 +94,7 @@ const Skills = () => {
         <div ref={ref2} />
       </div>
       <motion.div className="skill-moon"  style={{ y: textY }} initial={{opacity: 0}} animate={inview ? {opacity: 1} : {opacity: 0}}>
-        <img src="/bg/moon.png" alt=""/>
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/postman-landing-using-parachute-3027439-2532627.png" alt=""/>
       </motion.div>
       <div className="skill-bg"/>
     </div>
