@@ -16,7 +16,7 @@ const Skills = () => {
   const inview2 = useInView(ref2, { once: true });
   return (
     <Parallax
-    strength={380}
+    strength={300}
     bgImage={"/bg/skillbg.jpeg"}>
     <div className="my-skill" ref={parallaxRef}>
       <div className="skill-content">

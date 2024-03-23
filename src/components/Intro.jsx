@@ -157,7 +157,7 @@ const Intro = () => {
               <button
                 key={page}
                 onClick={() => currentPageSet(page)}
-                style={currentPage === page ? { backgroundColor: "#000" } : {}}
+                style={currentPage === page ? { backgroundColor: "#ff9100" } : {}}
               />
             ))}
             <span onClick={() => set_pause((prev) => !prev)}>
