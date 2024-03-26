@@ -800,16 +800,6 @@
             }
         }
     }
-
-    .bg-stars {
-        position: absolute;
-        inset: 0;
-        z-index: 10;
-        background-image: url("../../public/bg/stars.png");
-        background-position: bottom;
-        background-size: cover;
-    }
-
     .footer {
         z-index: 11;
         position: absolute;
