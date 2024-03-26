@@ -119,7 +119,7 @@ const Intro = () => {
                         initial="entry"
                         animate="center"
                         exit="hide"
-                        style={pause ? {color: "#6b6b6b"} : {}}
+                        style={pause ? {color: "#008992"} : {}}
                       >
                         {data}
                       </motion.p>

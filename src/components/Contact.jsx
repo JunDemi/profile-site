@@ -15,7 +15,7 @@ const Contact = () => {
           <Parallax strength={-200} bgImage="/bg/stone.png">
 
           <div className="contact-section">
-          <h1 className="contact-title">Contact</h1>
+          <h1 className="contact-title cloud-title">Contact</h1>
           <div className="contact-me">
             <div className="contact-info">
               <div>
