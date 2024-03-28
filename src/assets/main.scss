@@ -209,6 +209,7 @@
 
             p {
                 background-color: white;
+                box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
                 border-radius: 10px;
                 padding: 1rem;
                 font-size: 17px;
@@ -220,15 +221,17 @@
             .my-skill-list {
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
-                gap: 5px;
+                gap: 15px;
                 h2 {
                     font-family: "SUITE-bold";
                     font-size: 15px;
                     letter-spacing: -0.5px;
                     background-color: white;
+                    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
                     text-align: center;
                     border-radius: 30px;
                     padding: 3px 0;
+                    margin-bottom: 5px;
                 }
                 span{
                     grid-column: span 4;
@@ -238,22 +241,23 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width: 140px;
-                    height: 140px;
-                    background-color: #00000087;
-                    border: 0.5px solid white;
+                    width: 125px;
+                    height: 125px;
+                    background-color: #ffffffd1;
+                    box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+                    border-radius: 10px;
                     gap: 10px;
 
                     h3 {
-                        color: white;
+                        
                         font-size: 14px;
                         font-weight: bold;
                         letter-spacing: -0.4px;
                     }
 
                     img {
-                        width: 50px;
-                        height: 50px;
+                        width: 40px;
+                        height: 40px;
                     }
                 }
             }
@@ -278,6 +282,7 @@
     overflow-x: hidden;
     position: relative;
     height: 100dvh;
+    background-color: #fdbc3e;
 
     .portfolio-bg {
         height: 100dvh;
@@ -295,8 +300,6 @@
         }
 
         .portfolio-slider {
-
-    color: white;
             margin: 5rem 0 0 3rem;
             position: relative;
             height: 400px;
@@ -384,22 +387,26 @@
 
                 .portfolio-slide-text {
                     a {
-                        color: white;
-                        transition: all .2s;
-
+                        color: #fff;
                         svg {
                             margin-left: 10px;
                             stroke-width: 2px;
+                            background-color: #fff;
+                            padding: 5px;
+                            stroke: #000;
+                            border-radius: 50%;
+                            box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
                             width: 20px;
                             height: 20px;
+                            transition: all .2s;
                         }
-
+                        &:hover{
+                            svg{
+                                background-color: #d1d1d1;
+                            }
+                        }
                         font-weight: bold;
                         font-size: 24px;
-
-                        &:hover {
-                            color: #aeaeae;
-                        }
                     }
 
                     h3 {
@@ -408,16 +415,19 @@
                         margin-top: 1rem;
                         line-height: 20px;
                         max-width: 500px;
+                        background-color: #fff;
+                        padding: 5px 15px;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
                     }
 
 
                     .feature-list {
-                        border: 0.5px solid white;
                         position: relative;
                         margin-top: 2rem;
                         margin-left: 10px;
                         padding: 20px 10px;
-                        background-color: #000000ac;
+                        background-color: #fff;
 
                         h4 {
                             position: absolute;
@@ -447,7 +457,7 @@
                         img {
                             height: 22px;
                             border-radius: 30px;
-                            border: 1px solid #525252;
+                            box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
                         }
                     }
                 }

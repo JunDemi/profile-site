@@ -90,22 +90,23 @@ const Portfolio = () => {
     router("/");
   };
 
-  useEffect(()=> {
-    if(pathname === ""){
+  useEffect(() => {
+    if (pathname === "") {
       set_overlay(false);
-    }else{
+    } else {
       set_overlay(true);
     }
-  },[pathname]);
+  }, [pathname]);
   return (
     <>
       <div className="portfolio-container">
-        <Parallax
-          strength={350}
-          bgImage="/bg/greenblue.jpeg"
-          className="portfolio-bg"
-        />
-        <div className="portfolio-content">
+        <Parallax strength={-130} bgImage="/bg/birds.png">
+          <Parallax
+            strength={350}
+            bgImage="/bg/yellowbg.png"
+            className="portfolio-bg"
+          />
+           <div className="portfolio-content">
           <motion.h1
           className="cloud-title"
             initial={{ opacity: 0, x: -100 }}
@@ -267,6 +268,7 @@ const Portfolio = () => {
             ))}
           </motion.div>
         </div>
+        </Parallax>
       </div>
       <AnimatePresence>
         {overlay && (
@@ -276,22 +278,23 @@ const Portfolio = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-              <motion.svg
-              className="close_btn" onClick={closeOverlay}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                whileHover={{rotateZ: 90}}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </motion.svg>
-            <PortfolioDetail data={portfolioList}/>
+            <motion.svg
+              className="close_btn"
+              onClick={closeOverlay}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              whileHover={{ rotateZ: 90 }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </motion.svg>
+            <PortfolioDetail data={portfolioList} />
           </motion.div>
         )}
       </AnimatePresence>
