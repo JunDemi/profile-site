@@ -247,7 +247,6 @@
                     box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
                     border-radius: 10px;
                     gap: 10px;
-
                     h3 {
                         
                         font-size: 14px;
@@ -311,7 +310,7 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
-
+                gap: 20px;
                 .portfolio-slide-img {
                     width: 650px;
                     height: 400px;
@@ -386,31 +385,37 @@
                 }
 
                 .portfolio-slide-text {
-                    a {
-                        color: #fff;
-                        svg {
-                            margin-left: 10px;
-                            stroke-width: 2px;
+                    .portfolio-site-link{
+                        display: flex;
+                        align-items: center;
+                        span{
                             background-color: #fff;
-                            padding: 5px;
-                            stroke: #000;
-                            border-radius: 50%;
-                            box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
-                            width: 20px;
-                            height: 20px;
-                            transition: all .2s;
+                            font-family: "SUITE-medium";
+                            font-size: 24px;
+                            padding: 5px 15px;
+                            border-radius: 30px;
+                            box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
                         }
-                        &:hover{
-                            svg{
-                                background-color: #d1d1d1;
+                        a {
+                            svg {
+                                margin-left: 10px;
+                                stroke-width: 2px;
+                                background-color: #fff;
+                                padding: 8px;
+                                stroke: #000;
+                                border-radius: 50%;
+                                box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+                                width: 25px;
+                                height: 25px;
+                                transition: all .2s;
+                                &:hover{
+                                    stroke: #fdbc3e;
+                                }
                             }
                         }
-                        font-weight: bold;
-                        font-size: 24px;
                     }
-
                     h3 {
-                        font-weight: 200;
+                        font-family: "SUITE-medium";
                         font-size: 14px;
                         margin-top: 1rem;
                         line-height: 20px;
@@ -425,22 +430,23 @@
                     .feature-list {
                         position: relative;
                         margin-top: 2rem;
-                        margin-left: 10px;
                         padding: 20px 10px;
                         background-color: #fff;
-
+                        border-radius: 10px;
+                        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
                         h4 {
                             position: absolute;
-                            background-color: #000000;
-                            border: 0.5px solid white;
+                            background-color: #fff;
+                            border-radius: 30px;
                             padding: 2px 8px;
                             top: -10px;
-                            left: 10px;
+                            left: 20px;
                             font-size: 15px;
-                            font-weight: bold;
+                            font-family: "SUITE-bold";
                         }
-
                         p {
+
+                        font-family: "SUITE-medium";
                             margin: 1rem 0 0 1rem;
                             font-size: 15px;
                             font-weight: 200;
@@ -468,7 +474,7 @@
             position: absolute;
             z-index: 30;
             right: 3rem;
-            top: 30%;
+            top: 25%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -483,10 +489,10 @@
 
                 .progress-line {
                     border: none;
-                    background-color: #a7a7a7;
-                    width: 0.5px;
-                    height: 40px;
-                    margin: 0;
+                    background-color: #fff;
+                    width: 2px;
+                    height: 30px;
+                    margin: 5px 0;
 
                     &.number6 {
                         display: none;
@@ -498,6 +504,7 @@
                     background: none;
                     border: 1px solid white;
                     border-radius: 50%;
+                    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
                     color: white;
                     width: 25px;
                     height: 25px;
@@ -686,7 +693,7 @@
         .contact-memo {
             color: black;
             z-index: 11;
-            background-color: white;
+            background-color: #ffffffd0;
             box-shadow: 7px 7px rgba(0,0,0,0.2);
             border-radius: 20px;
             padding: 1.5rem;
@@ -704,53 +711,59 @@
                 gap: 5px;
 
                 textarea {
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family: "SUITE-medium";
                     font-size: 15px;
-                    border: 2px solid #899db1;
+                    border: 2px solid #bbbbbb;
+                    border-radius: 10px;
                     padding: 6px;
                     width: 400px;
                     height: 52px;
                     transition: all .2s;
 
                     &:focus {
-                        border-color: #6a5acd;
-                        letter-spacing: 1px;
-
-                        &::placeholder {
-                            color: black;
-                        }
+                        border-color: #fdda41;
                     }
                 }
 
                 button {
                     border: none;
-                    border-radius: 5px;
+                    border-radius: 50%;
                     color: white;
                     width: 68px;
                     height: 68px;
-                    border-radius: 2px;
                     cursor: pointer;
                     transition: all .2s;
                     font-size: 35px;
-
-                    &:hover {
-                        background-color: #5347a4;
-                    }
                 }
             }
 
             .memo-list {
-                background-color: whitesmoke;
-                border: 2px solid #6a5acd;
+                border: 2px solid #79d3f9;
                 font-size: 13px;
-
+                border-radius: 10px;
                 h5 {
                     color: #686868;
                     padding: 18px 10px;
                     text-align: center;
                 }
-
                 .memo-object {
+                    &:first-child{
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+                    &:last-child{
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+                    &:nth-child(2n-1){
+                        background-color: #fdfeff;
+                    }
+                    &:nth-child(2n){
+                        background-color: #f1fbfd;
+                    }
+                    &:hover{
+                        background-color: #def8fd;
+                    }
                     position: relative;
                     cursor: pointer;
                     display: flex;
@@ -759,35 +772,48 @@
                     align-items: center;
                     padding: 18px 10px;
                     transition: all .2s;
-
-                    &:hover {
-                        background-color: #e4e4e4;
-                    }
-
                     .memo-detail {
                         position: absolute;
                         width: 300px;
-                        border: 2px solid #6a5acd;
+                        border-radius: 10px;
                         background-color: white;
+                        box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
                         bottom: 0;
-                        left: -310px;
+                        left: -305px;
                         overflow: hidden;
-
                         h4 {
                             padding: 10px 15px;
                             font-size: 12px;
-                            background-color: #6a5acd;
+                            background-color: #2dd7fa;
                             color: white;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            svg{
+                                background: #f76464;
+                                border: 0.5px solid #919191;
+                                padding: 2px;
+                                stroke: #f76464;
+                                display: grid;
+                                place-items: center;
+                                width: 12px;
+                                height: 12px;
+                                font-size: 14px;
+                                border-radius: 50%;
+                                &:hover{
+                                    stroke: #682b2b;
+                                }
+                            }
                         }
 
                         textarea {
                             font-size: 14px;
-                            cursor: pointer;
+                            cursor: default;
                             color: #686868;
-                            font-family: Arial, Helvetica, sans-serif;
+                            font-family: "SUITE-light";
                             padding: 10px 15px;
                             border: none;
-                            width: 300px;
+                            width: 280px;
                             height: 200px;
                         }
                     }
@@ -800,7 +826,6 @@
                 align-items: center;
                 margin-top: 1.5rem;
                 gap: 10px;
-
                 span {
                     cursor: pointer;
                     border-radius: 50%;
@@ -809,6 +834,7 @@
                     width: 28px;
                     height: 28px;
                     font-size: 12px;
+                    font-family: "SUITE-medium";
                     text-align: center;
                 }
             }

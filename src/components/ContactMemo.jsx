@@ -23,17 +23,17 @@ const ContactMemo = () => {
 
   const openMemoDetail = (memoId) => {
     if(memoDetail === memoId){
-        set_memoDetail("");
+      set_memoDetail("");
     }else{
-        set_memoDetail(memoId);
+      set_memoDetail(memoId);
     }
-  }
+  };
+
   return (
     <div className="contact-memo">
       <h1>간단한 메모 남겨주세요...</h1>
       <form className="memo-form" onSubmit={handleSubmit(onValid)}>
         <textarea
-          placeholder="Message"
           autoComplete="off"
           {...register("message", {
             required: true,
@@ -43,8 +43,8 @@ const ContactMemo = () => {
           disabled={formLoading}
           style={
             formLoading
-              ? { backgroundColor: "#5347a4" }
-              : { backgroundColor: "#6a5acd" }
+              ? { backgroundColor: "#e5bb00" }
+              : { backgroundColor: "#fdda41" }
           }
         >
           <motion.p animate={formLoading ? { rotateZ: 45 } : { rotateZ: 0 }}>
@@ -65,20 +65,43 @@ const ContactMemo = () => {
                   className="memo-object"
                   onClick={() => openMemoDetail(memo.memo)}
                 >
-                  <p>{memo.memoInfo.message.length > 20 ? memo.memoInfo.message.slice(0, 30) + "...": memo.memoInfo.message}</p>
+                  <p>
+                    {memo.memoInfo.message.length > 20
+                      ? memo.memoInfo.message.slice(0, 30) + "..."
+                      : memo.memoInfo.message}
+                  </p>
                   <p>{compareTimeFormat(memo.memoInfo.date)}</p>
                   <AnimatePresence>
-                  {memo.memo === memoDetail && (
-                    <motion.div className="memo-detail"
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    exit={{opacity: 0}}
-                    layoutId="memos"
-                    >
-                        <h4>작성일: {datetimeFormat(memo.memoInfo.date)}</h4>
-                        <textarea defaultValue={memo.memoInfo.message} readOnly/>
-                    </motion.div>
-                  )}
+                    {memo.memo === memoDetail && (
+                      <motion.div
+                        className="memo-detail"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        layoutId="memos"
+                      >
+                        <h4>
+                          작성일: {datetimeFormat(memo.memoInfo.date)}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="2"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M6 18 18 6M6 6l12 12"
+                            />
+                          </svg>
+                        </h4>
+                        <textarea
+                          defaultValue={memo.memoInfo.message}
+                          readOnly
+                        />
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </motion.div>
               ))
@@ -88,18 +111,21 @@ const ContactMemo = () => {
             {[...Array(Math.ceil(data.length / 5))].map((d, n) => (
               <motion.span
                 key={n}
-                onClick={() => {set_page(n); set_memoDetail("")}}
+                onClick={() => {
+                  set_page(n);
+                  set_memoDetail("");
+                }}
                 animate={
                   page === n
                     ? {
-                        backgroundColor: "#6a5acd",
-                        border: "1px solid #6a5acd",
+                        backgroundColor: "#feb7b7",
+                        border: "1.5px solid #feb7b7",
                         color: "#fff",
                       }
                     : {
                         backgroundColor: "#fff",
-                        border: "1px solid #6a5acd",
-                        color: "#6a5acd",
+                        border: "1.5px solid #feb7b7",
+                        color: "#feb7b7",
                       }
                 }
               >

@@ -195,9 +195,10 @@ const Portfolio = () => {
                         </div>
                       </motion.div>
                       <div className="portfolio-slide-text">
-                        <div>
+                        <div className="portfolio-site-link">
+                          <span>
+                        {data.siteName}</span>
                           <Link to={data.link} target="_blank">
-                            {data.siteName}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -250,6 +251,7 @@ const Portfolio = () => {
                           backgroundColor: "#fff",
                           color: "#000",
                           fontSize: "16px",
+                          fontFamily: "SUITE-bold"
                         }
                       : {}
                   }
