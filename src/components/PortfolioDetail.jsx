@@ -75,7 +75,7 @@ const PortfolioDetail = (prop) => {
           <motion.button
             className="detail-page-btn prev"
             onClick={() => prevPage(prop.data.length)}
-            whileHover={{x: -5}}
+            whileHover={{x: -3}}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const PortfolioDetail = (prop) => {
           <motion.button
             className="detail-page-btn next"
             onClick={() => nextPage(prop.data.length)}
-            whileHover={{x: 5}}
+            whileHover={{x: 3}}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +108,7 @@ const PortfolioDetail = (prop) => {
           </motion.button>
           <div className="detail-current-page">
             <p>{Number(pathname) + 1}</p>
+            <hr/>
             <p>{prop.data.length}</p>
           </div>
           <AnimatePresence mode="sync">

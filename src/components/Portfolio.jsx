@@ -117,8 +117,8 @@ const Portfolio = () => {
           </motion.h1>
           <motion.div
             className="portfolio-slider"
-            initial={{ opacity: 0, x: 150 }}
-            animate={inview ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
+            initial={{ opacity: 0 }}
+            animate={inview ? { opacity: 1 } : { opacity: 0}}
             transition={{ delay: 0.3, ease: "easeOut" }}
           >
             <AnimatePresence mode="sync" custom={back}>
@@ -279,6 +279,13 @@ const Portfolio = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            <div className="detail-loading" >
+            <motion.img src="/bg/loading.png"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, type: "tween" , duration: 2 }}
+            />
+              Loading...
+            </div>
             <motion.svg
               className="close_btn"
               onClick={closeOverlay}
