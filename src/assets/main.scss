@@ -281,7 +281,7 @@
     overflow-x: hidden;
     position: relative;
     height: 100dvh;
-    background-color: #fdbc3e;
+    background-color: #c0e7f9;
 
     .portfolio-bg {
         height: 100dvh;
@@ -299,7 +299,7 @@
         }
 
         .portfolio-slider {
-            margin: 5rem 0 0 3rem;
+            margin: 5rem 0 0 7rem;
             position: relative;
             height: 400px;
 
@@ -312,14 +312,16 @@
                 align-items: flex-start;
                 gap: 20px;
                 .portfolio-slide-img {
-                    width: 650px;
+                    width: 580px;
                     height: 400px;
                     overflow: hidden;
                     position: relative;
                     z-index: 1;
+                    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+                    border-radius: 15px;
 
                     .macbook-img {
-                        width: 650px;
+                        width: 580px;
                         height: 400px;
                         z-index: 3;
                         overflow: hidden;
@@ -328,19 +330,20 @@
                     .macbook-img-slider {
                         cursor: pointer;
                         position: absolute;
-                        top: 24px;
-                        left: 75px;
+                        top: 12px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         z-index: 2;
 
                         .view-slider {
                             position: relative;
-                            width: 501px;
-                            height: 325px;
+                            width: 552px;
+                            height: 352px;
 
                             img {
                                 position: absolute;
-                                width: 501px;
-                                height: 325px;
+                                width: 552px;
+                                height: 352px;
                             }
 
                             .view-page-button {
@@ -437,16 +440,14 @@
                         h4 {
                             position: absolute;
                             background-color: #fff;
-                            border-radius: 30px;
-                            padding: 2px 8px;
+                            border-radius: 10px;
+                            padding: 5px 8px;
                             top: -10px;
                             left: 20px;
                             font-size: 15px;
                             font-family: "SUITE-bold";
                         }
                         p {
-
-                        font-family: "SUITE-medium";
                             margin: 1rem 0 0 1rem;
                             font-size: 15px;
                             font-weight: 200;
@@ -502,10 +503,10 @@
                 button {
                     cursor: pointer;
                     background: none;
-                    border: 1px solid white;
                     border-radius: 50%;
+                    border: none;
                     box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
-                    color: white;
+                    background-color: #fff;
                     width: 25px;
                     height: 25px;
                     font-size: 13px;
@@ -601,17 +602,18 @@
         position: relative;
 
         .macbook-device {
-            width: 1080px;
-            margin-bottom: 6.5rem;
+            width: 900px;
+            margin-bottom: 120px;
+            border-radius: 20px;
         }
 
         .macbook-view {
             position: absolute;
-            bottom: 172px;
+            bottom: 174px;
             left: 50%;
             transform: translateX(-50%);
-            width: 831px;
-            height: 520px;
+            width: 857px;
+            height: 530px;
             cursor: pointer;
         }
     }
