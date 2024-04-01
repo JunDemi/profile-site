@@ -12,9 +12,6 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        // background-image: linear-gradient(rgba(0, 0, 0, 0.3),
-        //         rgba(0, 0, 0, 0)),
-        //         url("../../public/bg/구름4.png");
         background-image: url("../../public/bg/구름4.png");
         background-position: bottom;
         background-size: cover;
@@ -119,7 +116,7 @@
                 transition: all .2s;
                 background-color: white;
                 box-shadow: 3px 3px rgba(0,0,0,0.2);
-                
+
             }
 
             span {
@@ -248,7 +245,7 @@
                     border-radius: 10px;
                     gap: 10px;
                     h3 {
-                        
+
                         font-size: 14px;
                         font-weight: bold;
                         letter-spacing: -0.4px;
@@ -603,7 +600,7 @@
             border: none;
             width: 1px;
             height: 20px;
-            
+
             background-color: #fff;
         }
     }
@@ -692,7 +689,7 @@
         justify-content: space-between;
         align-items: flex-start;
         margin: 0 7rem;
-        
+
         .contact-info {
             background-color: #ffffff;
             box-shadow: 7px 7px rgba(0,0,0,0.2);
