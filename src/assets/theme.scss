@@ -3,55 +3,27 @@
 /*   라이트 모드 테마   */
 html[data-theme="light"] {
   --color-text: #{$text-color-light};
+  --color-text-inherit: #{$text-color-inherit-light};
+  --color-text-2: #{$text-color-light-2};
   --color-background: #{$bg-color-light};
+  --color-background-inherit: #{$bg-color-inherit-light};
   --color-blur: #{$bg-color-blur-light};
   --color-shadow: #{$shadow-color-light};
-}
-
-div[data-theme="light"] {
-  --color-text: #{$text-color-light};
-  --color-background: #{$bg-color-light};
-  --color-blur: #{$bg-color-blur-light};
-  --color-shadow: #{$shadow-color-light};
-}
-
-span[data-theme="light"] {
-  --color-text: #{$text-color-light};
-  --color-background: #{$bg-color-light};
-  --color-blur: #{$bg-color-blur-light};
-  --color-shadow: #{$shadow-color-light};
-}
-svg[data-theme="light"] {
-  --color-text: #{$text-color-light};
-  --color-background: #{$bg-color-light};
-  --color-blur: #{$bg-color-blur-light};
-  --color-shadow: #{$shadow-color-light};
+  --color-parallax-bg: #{$parallax-bg-color-light-1};
+  --color-button-bg-1: #{$button-color-light-1};
+  --color-memo-container: #{$contact-memo-container-light};
 }
 
 /*   다크 모드 테마   */
 html[data-theme="dark"] {
   --color-text: #{$text-color-dark};
+  --color-text-inherit: #{$text-color-inherit-dark};
+  --color-text-2: #{$text-color-dark-2};
   --color-background: #{$bg-color-dark};
+  --color-background-inherit: #{$bg-color-inherit-dark};
   --color-blur: #{$bg-color-blur-dark};
   --color-shadow: #{$shadow-color-dark};
-}
-
-div[data-theme="dark"] {
-  --color-text: #{$text-color-dark};
-  --color-background: #{$bg-color-dark};
-  --color-blur: #{$bg-color-blur-dark};
-  --color-shadow: #{$shadow-color-dark};
-}
-
-span[data-theme="dark"] {
-  --color-text: #{$text-color-dark};
-  --color-background: #{$bg-color-dark};
-  --color-blur: #{$bg-color-blur-dark};
-  --color-shadow: #{$shadow-color-dark};
-}
-svg[data-theme="dark"] {
-  --color-text: #{$text-color-dark};
-  --color-background: #{$bg-color-dark};
-  --color-blur: #{$bg-color-blur-dark};
-  --color-shadow: #{$shadow-color-dark};
+  --color-parallax-bg: #{$parallax-bg-color-dark-1};
+  --color-button-bg-1: #{$button-color-dark-1};
+  --color-memo-container: #{$contact-memo-container-dark};
 }

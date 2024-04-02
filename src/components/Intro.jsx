@@ -7,6 +7,8 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import { introduceText } from "../Utils";
 import { useFollowPointer } from "../hooks/useFollowPointer";
+import { useRecoilState } from "recoil";
+import { themeState } from "../atom";
 const boxVar = {
   entry: (isBack) => ({
     x: isBack ? -360 : 360,
@@ -37,6 +39,8 @@ const boxVar = {
   }),
 };
 const Intro = () => {
+  const [themeMode, ] = useRecoilState(themeState);
+
   const parallaxRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: parallaxRef,
@@ -130,7 +134,7 @@ const Intro = () => {
           </div>
           <motion.img
             className="intro-moon"
-            src="/bg/sun.png"
+            src={`/bg/${themeMode ? "moon" : "sun"}.png`}
             alt=""
             // animate={{ rotateZ: -240}}
             // transition={{ duration: 3, repeat: Infinity,repeatType: "reverse", ease: "easeInOut" }}
