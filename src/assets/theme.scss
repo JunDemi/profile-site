@@ -2,14 +2,56 @@
 
 /*   라이트 모드 테마   */
 html[data-theme="light"] {
-    --color-text: #{$text-color-1};
-    --color-background: #{$bg-color-1};
-    --color-btn : #{$btn-color-1};
-  }
+  --color-text: #{$text-color-light};
+  --color-background: #{$bg-color-light};
+  --color-blur: #{$bg-color-blur-light};
+  --color-shadow: #{$shadow-color-light};
+}
 
-/*   라이트 모드 테마   */
+div[data-theme="light"] {
+  --color-text: #{$text-color-light};
+  --color-background: #{$bg-color-light};
+  --color-blur: #{$bg-color-blur-light};
+  --color-shadow: #{$shadow-color-light};
+}
+
+span[data-theme="light"] {
+  --color-text: #{$text-color-light};
+  --color-background: #{$bg-color-light};
+  --color-blur: #{$bg-color-blur-light};
+  --color-shadow: #{$shadow-color-light};
+}
+svg[data-theme="light"] {
+  --color-text: #{$text-color-light};
+  --color-background: #{$bg-color-light};
+  --color-blur: #{$bg-color-blur-light};
+  --color-shadow: #{$shadow-color-light};
+}
+
+/*   다크 모드 테마   */
 html[data-theme="dark"] {
-  --color-text: #{$text-color-2};
-  --color-background: #{$bg-color-2};
-  --color-btn : #{$btn-color-2};
+  --color-text: #{$text-color-dark};
+  --color-background: #{$bg-color-dark};
+  --color-blur: #{$bg-color-blur-dark};
+  --color-shadow: #{$shadow-color-dark};
+}
+
+div[data-theme="dark"] {
+  --color-text: #{$text-color-dark};
+  --color-background: #{$bg-color-dark};
+  --color-blur: #{$bg-color-blur-dark};
+  --color-shadow: #{$shadow-color-dark};
+}
+
+span[data-theme="dark"] {
+  --color-text: #{$text-color-dark};
+  --color-background: #{$bg-color-dark};
+  --color-blur: #{$bg-color-blur-dark};
+  --color-shadow: #{$shadow-color-dark};
+}
+svg[data-theme="dark"] {
+  --color-text: #{$text-color-dark};
+  --color-background: #{$bg-color-dark};
+  --color-blur: #{$bg-color-blur-dark};
+  --color-shadow: #{$shadow-color-dark};
 }

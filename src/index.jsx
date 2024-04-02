@@ -4,14 +4,16 @@ import App from "./App";
 import "./global.css";
 import "./assets/main.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
-
+import { RecoilRoot } from "recoil";
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
-      </QueryClientProvider>
+      <RecoilRoot>
+        <App />
+      </RecoilRoot>
+    </QueryClientProvider>
   </React.StrictMode>
 );

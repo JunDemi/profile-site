@@ -3,6 +3,7 @@ import Intro from "../components/Intro";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Skills from "../components/Skills";
+import ThemeToggle from "../components/ThemeToggle";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Skills/>
       <Portfolio />
       <Contact/>
+      <ThemeToggle/>
     </>
   );
 };
