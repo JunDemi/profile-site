@@ -14,7 +14,7 @@ const Contact = () => {
     <>
       <div
         style={themeMode ? {
-          background: "linear-gradient(90deg, #515563, #1f2928)",
+          background: "linear-gradient(90deg, rgb(25,48,71), rgb(10,13,16))",
         } : {background: "linear-gradient(90deg, #d7f0fb, #b3fbf8)"}}
       >
         <Parallax

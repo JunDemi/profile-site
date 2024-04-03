@@ -4,8 +4,12 @@ import { createMemo, readMemo } from "../firebase/fbContents";
 import { AnimatePresence, motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { compareTimeFormat, datetimeFormat } from "../Utils";
+import { useRecoilState } from "recoil";
+import { themeState } from "../atom";
 
 const ContactMemo = () => {
+  const [themeMode, ] = useRecoilState(themeState);
+
   const { handleSubmit, register, reset } = useForm({ mode: "onSubmit" });
   const { isLoading, data, refetch } = useQuery(["memo-list"], () =>
     readMemo()
@@ -42,8 +46,8 @@ const ContactMemo = () => {
         <button
           disabled={formLoading}
           style={
-            formLoading
-              ? { backgroundColor: "#e5bb00" }
+            themeMode
+              ? { backgroundColor: "#7eadc7" }
               : { backgroundColor: "#fdda41" }
           }
         >
@@ -118,14 +122,14 @@ const ContactMemo = () => {
                 animate={
                   page === n
                     ? {
-                        backgroundColor: "#feb7b7",
-                        border: "1.5px solid #feb7b7",
+                        backgroundColor: "var(--color-memo-detail-page)",
+                        border: "1.5px solid var(--color-memo-detail-page)",
                         color: "#fff",
                       }
                     : {
                         backgroundColor: "#fff",
-                        border: "1.5px solid #feb7b7",
-                        color: "#feb7b7",
+                        border: "1.5px solid var(--color-memo-detail-page)",
+                        color: "var(--color-memo-detail-page)",
                       }
                 }
               >

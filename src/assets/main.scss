@@ -507,7 +507,7 @@
 
                 .progress-line {
                     border: none;
-                    background-color: var(--color-background);
+                    background-color: var(--color-button-bg-1);
                     width: 2px;
                     height: 30px;
                     margin: 5px 0;
@@ -759,7 +759,9 @@
                 textarea {
                     font-family: "SUITE-medium";
                     font-size: 15px;
-                    border: 2px solid #bbbbbb;
+                    border: 2px solid var( --color-memo-textarea-border);
+                    background-color: var(--color-background);
+                    color: var(--color-text);
                     border-radius: 10px;
                     padding: 6px;
                     width: 400px;
@@ -767,7 +769,7 @@
                     transition: all .2s;
 
                     &:focus {
-                        border-color: #fdda41;
+                        border-color: var(--color-memo-textarea-focus);
                     }
                 }
 
@@ -784,7 +786,7 @@
             }
 
             .memo-list {
-                border: 2px solid #79d3f9;
+                border: 2px solid var(--color-memo-list-border);
                 font-size: 13px;
                 border-radius: 10px;
 
@@ -806,21 +808,21 @@
                     }
 
                     &:nth-child(2n-1) {
-                        background-color: #fdfeff;
+                        background-color: var(--color-memo-list-odd);
                     }
 
                     &:nth-child(2n) {
-                        background-color: #f1fbfd;
+                        background-color: var(--color-memo-list-even);
                     }
 
                     &:hover {
-                        background-color: #def8fd;
+                        background-color: var(--color-memo-list-hover);;
                     }
 
                     position: relative;
                     cursor: pointer;
                     display: flex;
-                    color: #686868;
+                    color: var(--color-text-2);
                     justify-content: space-between;
                     align-items: center;
                     padding: 18px 10px;
@@ -839,7 +841,7 @@
                         h4 {
                             padding: 10px 15px;
                             font-size: 12px;
-                            background-color: #2dd7fa;
+                            background-color: var(--color-memo-detail-head);
                             color: white;
                             display: flex;
                             justify-content: space-between;
