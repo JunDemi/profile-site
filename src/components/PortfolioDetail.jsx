@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { themeState } from "../atom";
 
 const pageVar = {
   entry: {
@@ -45,6 +47,7 @@ const viewVar = {
   },
 };
 const PortfolioDetail = (prop) => {
+  const [themeMode, ] = useRecoilState(themeState);
   const router = useNavigate();
   const pathname = useLocation().pathname.replace("/", "");
   const [viewPage, set_viewPage] = useState(0);
@@ -126,7 +129,7 @@ const PortfolioDetail = (prop) => {
                     <motion.div className="portfolio-modal">
                       <motion.img
                         className="macbook-device"
-                        src="/bg/macbook.png"
+                        src={`/bg/${themeMode ? "dark" : "light"}/macbook.png`}
                         alt=""
                       />
                       <AnimatePresence mode="sync">

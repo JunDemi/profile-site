@@ -12,6 +12,10 @@ html[data-theme="light"] {
   --color-parallax-bg: #{$parallax-bg-color-light-1};
   --color-button-bg-1: #{$button-color-light-1};
   --color-memo-container: #{$contact-memo-container-light};
+  --bg-cloud: #{rgb(175,231,242)};
+  --bg-cloud-0: #{url("../../public/bg/light/구름4.png")};
+  --bg-cloud-1: #{url("../../public/bg/light/구름1.png")};
+  --bg-cloud-2: #{url("../../public/bg/light/구름2.png")};
 }
 
 /*   다크 모드 테마   */
@@ -26,4 +30,8 @@ html[data-theme="dark"] {
   --color-parallax-bg: #{$parallax-bg-color-dark-1};
   --color-button-bg-1: #{$button-color-dark-1};
   --color-memo-container: #{$contact-memo-container-dark};
+  --bg-cloud: #{rgb(45, 57, 68)};
+  --bg-cloud-0: #{url("../../public/bg/dark/구름4.png")};
+  --bg-cloud-1: #{url("../../public/bg/dark/구름1.png")};
+  --bg-cloud-2: #{url("../../public/bg/dark/구름2.png")};
 }

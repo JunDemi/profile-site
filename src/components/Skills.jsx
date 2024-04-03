@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <Parallax
     strength={350}
-    bgImage={"/bg/skillbg.jpeg"}>
+    bgImage={`/bg/${themeMode ? "dark" : "light"}/skillbg.jpeg`}>
     <div className="my-skill" ref={parallaxRef}>
       <div className="skill-content">
         <motion.h1

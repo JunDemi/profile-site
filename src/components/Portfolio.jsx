@@ -4,6 +4,8 @@ import { portfolioList } from "../Utils";
 import { Parallax } from "react-parallax";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import PortfolioDetail from "./PortfolioDetail";
+import { useRecoilState } from "recoil";
+import { themeState } from "../atom";
 
 const boxVar = {
   entry: (isBack) => ({
@@ -54,6 +56,7 @@ const viewVar = {
   },
 };
 const Portfolio = () => {
+  const [themeMode, ] = useRecoilState(themeState);
   const pathname = useLocation().pathname.replace("/", "");
   const router = useNavigate();
   const ref2 = useRef(null);
@@ -100,10 +103,10 @@ const Portfolio = () => {
   return (
     <>
       <div className="portfolio-container">
-        <Parallax strength={-130} bgImage="/bg/birds.png">
+        <Parallax strength={-130} bgImage={`/bg/clouds.png`}>
           <Parallax
             strength={350}
-            bgImage="/bg/yellowbg.png"
+            bgImage={`/bg/${themeMode ? "dark" : "light"}/yellowbg.png`}
             className="portfolio-bg"
           />
            <div className="portfolio-content">
@@ -138,7 +141,7 @@ const Portfolio = () => {
                       <motion.div className="portfolio-slide-img">
                         <motion.img
                           className="macbook-img"
-                          src="/bg/macbook.png"
+                          src={`/bg/${themeMode ? "dark" : "light"}/macbook.png`}
                           alt=""
                         />
                         <div className="macbook-img-slider">

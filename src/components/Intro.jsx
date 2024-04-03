@@ -48,7 +48,6 @@ const Intro = () => {
   });
   const cloudY1 = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const cloudY2 = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
-  const mountainY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
 
   const followRef = useRef(null);
@@ -133,7 +132,7 @@ const Intro = () => {
           </div>
           <motion.img
             className="intro-moon"
-            src={`/bg/${themeMode ? "moon" : "sun"}.png`}
+            src={`/bg/${themeMode ? "dark/" : "light/"}sun.png`}
             alt=""
             // animate={{ rotateZ: -240}}
             // transition={{ duration: 3, repeat: Infinity,repeatType: "reverse", ease: "easeInOut" }}
@@ -147,7 +146,6 @@ const Intro = () => {
             }}
           />
         </motion.div>
-        <motion.div className="bg-full" style={{ y: mountainY }} />
         <motion.div className="bg-mountain" style={{ y: cloudY1 }} />
         <motion.div className="bg-mountain1" style={{ y: cloudY2 }} />
         <div className="intro-buttons">

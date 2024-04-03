@@ -2,18 +2,21 @@ import React from "react";
 import { Parallax } from "react-parallax";
 import Footer from "./Footer";
 import ContactMemo from "./ContactMemo";
+import { useRecoilState } from "recoil";
+import { themeState } from "../atom";
 
 //이메일, 전화번호
 //방명록 목록, 방명록 작성
 
 const Contact = () => {
+  const [themeMode, ] = useRecoilState(themeState);
   return (
     <>
-      <Parallax strength={300} bgImage="/bg/f0.jpg">
-        <Parallax strength={-300} bgImage="/bg/f4.png">
-          <Parallax strength={200} bgImage="/bg/f3.png">
-            <Parallax strength={50} bgImage="/bg/f2.png">
-              <Parallax strength={-200} bgImage="/bg/f1.png">
+      <Parallax strength={300} bgImage={`/bg/${themeMode ? "dark" : "light"}/f0.jpg`}>
+        <Parallax strength={-300} bgImage={`/bg/${themeMode ? "dark" : "light"}/f4.png`}>
+          <Parallax strength={200} bgImage={`/bg/${themeMode ? "dark" : "light"}/f3.png`}>
+            <Parallax strength={50} bgImage={`/bg/${themeMode ? "dark" : "light"}/f2.png`}>
+              <Parallax strength={-200} bgImage={`/bg/${themeMode ? "dark" : "light"}/f1.png`}>
                 <div className="contact-section">
                   <h1 className="contact-title cloud-title">Contact</h1>
                   <div className="contact-me">

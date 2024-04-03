@@ -8,21 +8,16 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-
-    .bg-full {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        background-image: url("../../public/bg/구름4.png");
+    background-color: var(--bg-cloud);
+        background-image: var(--bg-cloud-0);
         background-position: bottom;
         background-size: cover;
-    }
-
+        background-attachment: fixed;
     .bg-mountain {
         position: absolute;
         inset: 0;
         z-index: 15;
-        background-image: url("../../public/bg/구름1.png");
+        background-image: var(--bg-cloud-1);
         background-position: bottom;
         background-size: cover;
     }
@@ -31,7 +26,7 @@
         position: absolute;
         inset: 0;
         z-index: 10;
-        background-image: url("../../public/bg/구름2.png");
+        background-image: var(--bg-cloud-2);
         background-position: bottom;
         background-size: cover;
     }
