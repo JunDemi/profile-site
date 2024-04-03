@@ -1,4 +1,5 @@
 @use "./theme.scss" as *;
+
 /*     intro     */
 .parallax-container {
     height: 100dvh;
@@ -9,10 +10,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     background-color: var(--bg-cloud);
-        background-image: var(--bg-cloud-0);
-        background-position: bottom;
-        background-size: cover;
-        background-attachment: fixed;
+    background-image: var(--bg-cloud-0);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all .2s;
+
     .bg-mountain {
         position: absolute;
         inset: 0;
@@ -113,7 +116,7 @@
                 background: none;
                 transition: all .2s;
                 background-color: white;
-                box-shadow: 3px 3px rgba(0,0,0,0.2);
+                box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
 
             }
 
@@ -125,8 +128,9 @@
                 margin-left: 20px;
                 padding: 8px;
                 background-color: white;
-                box-shadow: 3px 3px rgba(0,0,0,0.2);
+                box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
                 border-radius: 50%;
+
                 svg {
                     width: 25px;
                     height: 25px;
@@ -218,6 +222,7 @@
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 gap: 15px;
+
                 h2 {
                     font-family: "SUITE-bold";
                     font-size: 15px;
@@ -230,9 +235,11 @@
                     padding: 3px 0;
                     margin-bottom: 5px;
                 }
-                span{
+
+                span {
                     grid-column: span 4;
                 }
+
                 div {
                     display: flex;
                     flex-direction: column;
@@ -245,6 +252,7 @@
                     box-shadow: 5px 5px var(--color-shadow);
                     border-radius: 10px;
                     gap: 10px;
+
                     h3 {
 
                         font-size: 14px;
@@ -309,6 +317,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 20px;
+
                 .portfolio-slide-img {
                     width: 580px;
                     height: 400px;
@@ -386,10 +395,11 @@
                 }
 
                 .portfolio-slide-text {
-                    .portfolio-site-link{
+                    .portfolio-site-link {
                         display: flex;
                         align-items: center;
-                        span{
+
+                        span {
                             color: var(--color-text);
                             background-color: var(--color-background);
                             font-family: "SUITE-medium";
@@ -398,6 +408,7 @@
                             border-radius: 30px;
                             box-shadow: 4px 4px var(--color-shadow);
                         }
+
                         a {
                             svg {
                                 margin-left: 10px;
@@ -410,12 +421,14 @@
                                 width: 25px;
                                 height: 25px;
                                 transition: all .2s;
-                                &:hover{
+
+                                &:hover {
                                     stroke: #fdbc3e;
                                 }
                             }
                         }
                     }
+
                     h3 {
                         font-family: "SUITE-medium";
                         font-size: 14px;
@@ -438,6 +451,7 @@
                         background-color: var(--color-background);
                         border-radius: 10px;
                         box-shadow: 5px 5px var(--color-shadow);
+
                         h4 {
                             position: absolute;
                             color: var(--color-text);
@@ -449,6 +463,7 @@
                             font-size: 15px;
                             font-family: "SUITE-bold";
                         }
+
                         p {
                             margin: 1rem 0 0 1rem;
                             font-size: 15px;
@@ -533,7 +548,8 @@
     background-color: #00000081;
     display: grid;
     place-items: center;
-    .detail-loading{
+
+    .detail-loading {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -544,11 +560,13 @@
         color: #fff;
         font-size: 20px;
         gap: 5px;
-        img{
+
+        img {
             width: 70px;
             height: 70px;
         }
     }
+
     .close_btn {
         position: absolute;
         top: 1rem;
@@ -558,6 +576,7 @@
         width: 40px;
         height: 40px;
     }
+
     .detail-page-btn {
         position: absolute;
         bottom: 350px;
@@ -596,7 +615,8 @@
         text-align: center;
         gap: 15px;
         color: #fff;
-        hr{
+
+        hr {
             border: none;
             width: 1px;
             height: 20px;
@@ -767,29 +787,36 @@
                 border: 2px solid #79d3f9;
                 font-size: 13px;
                 border-radius: 10px;
+
                 h5 {
                     color: #686868;
                     padding: 18px 10px;
                     text-align: center;
                 }
+
                 .memo-object {
-                    &:first-child{
+                    &:first-child {
                         border-top-left-radius: 8px;
                         border-top-right-radius: 8px;
                     }
-                    &:last-child{
+
+                    &:last-child {
                         border-bottom-left-radius: 8px;
                         border-bottom-right-radius: 8px;
                     }
-                    &:nth-child(2n-1){
+
+                    &:nth-child(2n-1) {
                         background-color: #fdfeff;
                     }
-                    &:nth-child(2n){
+
+                    &:nth-child(2n) {
                         background-color: #f1fbfd;
                     }
-                    &:hover{
+
+                    &:hover {
                         background-color: #def8fd;
                     }
+
                     position: relative;
                     cursor: pointer;
                     display: flex;
@@ -798,6 +825,7 @@
                     align-items: center;
                     padding: 18px 10px;
                     transition: all .2s;
+
                     .memo-detail {
                         position: absolute;
                         width: 300px;
@@ -807,6 +835,7 @@
                         bottom: 0;
                         left: -315px;
                         overflow: hidden;
+
                         h4 {
                             padding: 10px 15px;
                             font-size: 12px;
@@ -815,7 +844,8 @@
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            svg{
+
+                            svg {
                                 background: #f76464;
                                 border: 0.5px solid #919191;
                                 padding: 2px;
@@ -826,7 +856,8 @@
                                 height: 12px;
                                 font-size: 14px;
                                 border-radius: 50%;
-                                &:hover{
+
+                                &:hover {
                                     stroke: #682b2b;
                                 }
                             }
@@ -853,6 +884,7 @@
                 align-items: center;
                 margin-top: 1.5rem;
                 gap: 10px;
+
                 span {
                     cursor: pointer;
                     border-radius: 50%;
@@ -867,6 +899,7 @@
             }
         }
     }
+
     .footer {
         z-index: 11;
         position: absolute;
@@ -916,7 +949,7 @@
 }
 
 /*  테마 토글 버튼 */
-.theme-toggle-btn{
+.theme-toggle-btn {
     cursor: pointer;
     position: absolute;
     width: 45px;
@@ -931,7 +964,8 @@
     transition: all .2s;
     background-color: var(--color-background);
     box-shadow: 3px 3px var(--color-shadow);
-    svg{
+
+    svg {
         width: 25px;
         height: 25px;
     }
