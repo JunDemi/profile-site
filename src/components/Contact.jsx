@@ -9,14 +9,30 @@ import { themeState } from "../atom";
 //방명록 목록, 방명록 작성
 
 const Contact = () => {
-  const [themeMode, ] = useRecoilState(themeState);
+  const [themeMode] = useRecoilState(themeState);
   return (
     <>
-      <Parallax strength={300} bgImage={`/bg/${themeMode ? "dark" : "light"}/f0.jpg`}>
-        <Parallax strength={-300} bgImage={`/bg/${themeMode ? "dark" : "light"}/f4.png`}>
-          <Parallax strength={200} bgImage={`/bg/${themeMode ? "dark" : "light"}/f3.png`}>
-            <Parallax strength={50} bgImage={`/bg/${themeMode ? "dark" : "light"}/f2.png`}>
-              <Parallax strength={-200} bgImage={`/bg/${themeMode ? "dark" : "light"}/f1.png`}>
+      <div
+        style={themeMode ? {
+          background: "linear-gradient(90deg, #515563, #1f2928)",
+        } : {background: "linear-gradient(90deg, #d7f0fb, #b3fbf8)"}}
+      >
+        <Parallax
+          strength={-300}
+          bgImage={`/bg/${themeMode ? "dark" : "light"}/f4.png`}
+        >
+          <Parallax
+            strength={200}
+            bgImage={`/bg/${themeMode ? "dark" : "light"}/f3.png`}
+          >
+            <Parallax
+              strength={50}
+              bgImage={`/bg/${themeMode ? "dark" : "light"}/f2.png`}
+            >
+              <Parallax
+                strength={-200}
+                bgImage={`/bg/${themeMode ? "dark" : "light"}/f1.png`}
+              >
                 <div className="contact-section">
                   <h1 className="contact-title cloud-title">Contact</h1>
                   <div className="contact-me">
@@ -79,7 +95,7 @@ const Contact = () => {
             </Parallax>
           </Parallax>
         </Parallax>
-      </Parallax>
+      </div>
     </>
   );
 };
