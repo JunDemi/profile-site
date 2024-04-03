@@ -2,7 +2,11 @@ import React, { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { stackBack, stackFront } from "../Utils";
 import { Parallax } from "react-parallax";
+import { useRecoilState } from "recoil";
+import { themeState } from "../atom";
 const Skills = () => {
+  const [themeMode, ] = useRecoilState(themeState);
+
   const parallaxRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: parallaxRef,
@@ -54,7 +58,7 @@ const Skills = () => {
                 transition={{ delay: 0.3 + (number / 10) * 1.8 }}
               >
                 <h3>{data.stackName}</h3>
-                <img src={data.stackImg} alt="" />
+                <img src={`/stack icons/${(themeMode ? "/white/" : "/black/") + data.stackImg}`} alt="" />
               </motion.div>
             ))}
           </div>
@@ -86,7 +90,7 @@ const Skills = () => {
                 transition={{ delay: 0.3 + (number / 10) * 1.8 }}
               >
                 <h3>{data.stackName}</h3>
-                <img src={data.stackImg} alt="" />
+                <img src={`/stack icons/${(themeMode ? "/white/" : "/black/") + data.stackImg}`} alt="" />
               </motion.div>
             ))}
           </div>
