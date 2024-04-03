@@ -180,8 +180,8 @@ const PortfolioDetail = (prop) => {
                           onClick={() => set_viewPage(num)}
                           animate={
                             viewPage === num
-                              ? { width: "100px", border: "3px solid #64f0fa" }
-                              : { width: "60px", border: "3px solid #ffffff00" }
+                              ? { width: "100px", border: "2px solid #ffd500" }
+                              : { width: "60px", border: "2px solid var(--color-background-inherit)" }
                           }
                         />
                       ))}

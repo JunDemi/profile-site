@@ -544,8 +544,7 @@
     top: 0;
     left: 0;
     z-index: 30;
-    //background-color: #000000b6;
-    background-color: #00000081;
+    background-color: #000000a1;
     display: grid;
     place-items: center;
 
@@ -581,11 +580,10 @@
         position: absolute;
         bottom: 350px;
         background: var(--color-background);
-        box-shadow: 4px 4px var(--color-shadow);
         border-radius: 50%;
         display: grid;
         place-items: center;
-        border: none;
+        border: 2px solid var(--color-text-2);
         cursor: pointer;
         padding: 10px;
 
@@ -652,7 +650,7 @@
 }
 
 .detail-slide-button {
-    background-color: var(--color-background);
+    background-color: var(--color-blur);
     border-radius: 50px;
     position: absolute;
     padding: 18px 10px;
@@ -668,7 +666,6 @@
         height: 60px;
         cursor: pointer;
         border-radius: 10px;
-        box-shadow: 4px 4px var(--color-shadow);
     }
 
     button {
@@ -678,7 +675,6 @@
         height: 50px;
         display: grid;
         place-items: center;
-        box-shadow: 4px 4px var(--color-shadow);
         border: none;
         cursor: pointer;
 
