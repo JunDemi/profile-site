@@ -98,7 +98,7 @@ const Skills = () => {
         <div ref={ref2} />
       </div>
       <motion.div className="skill-moon"  style={{ y: textY }} initial={{opacity: 0}} animate={inview ? {opacity: 1} : {opacity: 0}}>
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/postman-landing-using-parachute-3027439-2532627.png" alt=""/>
+        <img src={`/bg/${themeMode ? "dark" : "light"}/skillmoon.png`}alt=""/>
       </motion.div>
       <div className="skill-bg"/>
     </div>
