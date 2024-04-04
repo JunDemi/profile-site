@@ -9,14 +9,14 @@ const pageVar = {
     opacity: 0,
     transition: {
       duration: 0.2,
-      delay: 0.5,
+      delay: 0.7,
     },
   },
   center: {
     opacity: 1,
     transition: {
       duration: 0.2,
-      delay: 0.5,
+      delay: 0.7,
     },
   },
   hide: {

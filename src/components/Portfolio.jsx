@@ -120,9 +120,9 @@ const Portfolio = () => {
           </motion.h1>
           <motion.div
             className="portfolio-slider"
-            initial={{ opacity: 0 }}
-            animate={inview ? { opacity: 1 } : { opacity: 0}}
-            transition={{ delay: 0.3, ease: "easeOut" }}
+            // initial={{ opacity: 0 }}
+            // animate={inview ? { opacity: 1 } : { opacity: 0}}
+            // transition={{ delay: 0.3, ease: "easeOut" }}
           >
             <AnimatePresence mode="sync" custom={back}>
               {portfolioList.map(

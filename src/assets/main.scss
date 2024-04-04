@@ -507,7 +507,7 @@
 
                 .progress-line {
                     border: none;
-                    background-color: var(--color-button-bg-1);
+                    background-color: #fff;
                     width: 2px;
                     height: 30px;
                     margin: 5px 0;
@@ -523,8 +523,8 @@
                     border-radius: 50%;
                     border: none;
                     box-shadow: 2px 2px var(--color-shadow);
-                    color: var(--color-text);
-                    background-color: var(--color-background);
+                    color: #787878;
+                    background-color: #fff;
                     width: 25px;
                     height: 25px;
                     font-size: 13px;
