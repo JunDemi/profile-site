@@ -281,13 +281,6 @@ const Portfolio = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="detail-loading" >
-            <motion.img src="/bg/loading.png"
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, type: "tween" , duration: 2 }}
-            />
-              Loading...
-            </div>
             <motion.svg
               className="close_btn"
               onClick={closeOverlay}

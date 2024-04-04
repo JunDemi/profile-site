@@ -47,7 +47,7 @@ const viewVar = {
   },
 };
 const PortfolioDetail = (prop) => {
-  const [themeMode, ] = useRecoilState(themeState);
+  const [themeMode] = useRecoilState(themeState);
   const router = useNavigate();
   const pathname = useLocation().pathname.replace("/", "");
   const [viewPage, set_viewPage] = useState(0);
@@ -73,12 +73,12 @@ const PortfolioDetail = (prop) => {
   };
   return (
     <>
-      {pathname ? (
+      {pathname && (
         <>
           <motion.button
             className="detail-page-btn prev"
             onClick={() => prevPage(prop.data.length)}
-            whileHover={{x: -3}}
+            whileHover={{ x: -3 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const PortfolioDetail = (prop) => {
           <motion.button
             className="detail-page-btn next"
             onClick={() => nextPage(prop.data.length)}
-            whileHover={{x: 3}}
+            whileHover={{ x: 3 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,108 +109,126 @@ const PortfolioDetail = (prop) => {
               />
             </svg>
           </motion.button>
-          <div className="detail-current-page">
-            <p>{Number(pathname) + 1}</p>
-            <hr/>
-            <p>{prop.data.length}</p>
-          </div>
           <AnimatePresence mode="sync">
-            {prop.data.map(
-              (pageData, pageNumber) =>
-                pageNumber === Number(pathname) && (
-                  <motion.div
-                    className="modal-container"
-                    key={pageNumber}
-                    variants={pageVar}
-                    initial="entry"
-                    animate="center"
-                    exit="hide"
-                  >
-                    <motion.div className="portfolio-modal">
-                      <motion.img
-                        className="macbook-device"
-                        src={`/bg/${themeMode ? "dark" : "light"}/macbook.png`}
-                        alt=""
-                      />
-                      <AnimatePresence mode="sync">
-                        {pageData.viewImg.map(
-                          (data, number) =>
-                            number === viewPage && (
-                              <motion.img
-                                className="macbook-view"
-                                src={data}
-                                alt=""
-                                key={number}
-                                onClick={() =>
-                                  window.open(pageData.link, "_blank")
-                                }
-                                variants={viewVar}
-                                initial="entry"
-                                animate="center"
-                                exit="hide"
+                {prop.data.map(
+                  (pageData, pageNumber) =>
+                    pageNumber === Number(pathname) && (
+                      <motion.div
+                        className="modal-container"
+                        key={pageNumber}
+                        variants={pageVar}
+                        initial="entry"
+                        animate="center"
+                        exit="hide"
+                      >
+                        <motion.div className="portfolio-modal">
+                          <motion.img
+                            className="macbook-device"
+                            src={`/bg/${
+                              themeMode ? "dark" : "light"
+                            }/macbook.png`}
+                            alt=""
+                          />
+                          <AnimatePresence mode="sync">
+                            {pageData.viewImg.map(
+                              (data, number) =>
+                                number === viewPage && (
+                                  <motion.img
+                                    className="macbook-view"
+                                    src={data}
+                                    alt=""
+                                    key={number}
+                                    onClick={() =>
+                                      window.open(pageData.link, "_blank")
+                                    }
+                                    variants={viewVar}
+                                    initial="entry"
+                                    animate="center"
+                                    exit="hide"
+                                  />
+                                )
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                        <div className="detail-slide-button">
+                          <motion.button
+                            className="prev_btn"
+                            onClick={() => prevView(pageData.viewImg.length)}
+                            whileTap={{ x: -7 }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
                               />
-                            )
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                    <div className="detail-slide-button">
-                      <motion.button
-                        className="prev_btn"
-                        onClick={() => prevView(pageData.viewImg.length)}
-                        whileTap={{ x: -7 }}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
-                          />
-                        </svg>
-                      </motion.button>
-                      {pageData.viewImg.map((img, num) => (
-                        <motion.img
-                          src={img}
-                          key={num}
-                          alt=""
-                          onClick={() => set_viewPage(num)}
-                          animate={
-                            viewPage === num
-                              ? { width: "100px", border: "2px solid #ffd500" }
-                              : { width: "60px", border: "2px solid var(--color-background-inherit)" }
-                          }
-                        />
-                      ))}
-                      <motion.button
-                        className="next_btn"
-                        onClick={() => nextView(pageData.viewImg.length)}
-                        whileTap={{ x: 7 }}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
-                      </motion.button>
-                    </div>
-                  </motion.div>
-                )
-            )}
-          </AnimatePresence>
+                            </svg>
+                          </motion.button>
+                          {pageData.viewImg.map((img, num) => (
+                            <motion.img
+                              src={img}
+                              key={num}
+                              alt=""
+                              onClick={() => set_viewPage(num)}
+                              animate={
+                                viewPage === num
+                                  ? {
+                                      width: "100px",
+                                      border: "2px solid #ffd500",
+                                    }
+                                  : {
+                                      width: "60px",
+                                      border:
+                                        "2px solid #fff",
+                                    }
+                              }
+                            />
+                          ))}
+                          <motion.button
+                            className="next_btn"
+                            onClick={() => nextView(pageData.viewImg.length)}
+                            whileTap={{ x: 7 }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+                              />
+                            </svg>
+                          </motion.button>
+                        </div>
+                      </motion.div>
+                    )
+                )}
+              </AnimatePresence>
+          <div className="detail-container">
+            <div className="detail-current-page">
+              <p>{Number(pathname) + 1}</p>
+              <hr />
+              <p>{prop.data.length}</p>
+            </div>
+
+            <div className="detail-loading">
+              <motion.img
+                src="/bg/loading.png"
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, type: "tween", duration: 2 }}
+              />
+              Loading...
+            </div>
+          </div>
         </>
-      ) : (
-        <img src="/bg/full.png" alt="" width="100px" />
       )}
     </>
   );
