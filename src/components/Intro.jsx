@@ -214,7 +214,7 @@ const Intro = () => {
             </motion.a>
             <hr />
             <motion.a
-              href=""
+              href="https://thread-twilight-0d6.notion.site/1e573c327e1d4f1cbfd4df5c1ebf1090?pvs=4"
               whileHover={{ y: -5, scale: 1.05 }}
               transition={{ duration: 0.1 }}
             >
