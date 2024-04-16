@@ -96,11 +96,11 @@ export const portfolioList = [
   },
   {
     viewImg: [
-      "/maplestory/maple3.png",
-      "/maplestory/maple5.png",
-      "/maplestory/maple4.png",
-      "/maplestory/maple6.png",
-      "/maplestory/maple2.png",
+      "/maplestory/maple3.webp",
+      "/maplestory/maple5.webp",
+      "/maplestory/maple4.webp",
+      "/maplestory/maple6.webp",
+      "/maplestory/maple2.webp",
     ],
     siteName: "MapleStory Open API",
     siteIntro:
@@ -121,10 +121,10 @@ export const portfolioList = [
   },
   {
     viewImg: [
-      "/coin/coin1.png",
-      "/coin/coin2.png",
-      "/coin/coin3.png",
-      "/coin/coin4.png",
+      "/coin/coin1.webp",
+      "/coin/coin2.webp",
+      "/coin/coin3.webp",
+      "/coin/coin4.webp",
     ],
     siteName: "Crypto Coin Tracker",
     siteIntro:
@@ -191,10 +191,10 @@ export const portfolioList = [
   },
   {
     viewImg: [
-      "/gclef/gcl1.png",
-      "/gclef/gcl2.png",
-      "/gclef/gcl3.png",
-      "/gclef/gcl4.png",
+      "/gclef/gcl1.webp",
+      "/gclef/gcl2.webp",
+      "/gclef/gcl3.webp",
+      "/gclef/gcl4.webp",
     ],
     siteName: "G-Clef",
     siteIntro:
