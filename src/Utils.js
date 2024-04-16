@@ -242,6 +242,7 @@ export const portfolioList = [
     link: "https://surroundio.org/",
   },
 ];
+
 export const datetimeFormat = (millisecond) => {
   // 밀리초를 Date 객체로 변환
   const date = new Date(millisecond);
