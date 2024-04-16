@@ -70,12 +70,12 @@ export const stackBack = [
 export const portfolioList = [
   {
     viewImg: [
-      "/the-market/themarket1.png",
-      "/the-market/themarket2.png",
-      "/the-market/themarket5.png",
-      "/the-market/themarket3.png",
-      "/the-market/themarket6.png",
-      "/the-market/themarket4.png",
+      "/the-market/themarket1.webp",
+      "/the-market/themarket2.webp",
+      "/the-market/themarket5.webp",
+      "/the-market/themarket3.webp",
+      "/the-market/themarket6.webp",
+      "/the-market/themarket4.webp",
     ],
     siteName: "The Market",
     siteIntro:
@@ -143,10 +143,10 @@ export const portfolioList = [
   },
   {
     viewImg: [
-      "/nomflix/nom1.png",
-      "/nomflix/nom2.png",
-      "/nomflix/nom3.png",
-      "/nomflix/nom4.png",
+      "/nomflix/nom1.webp",
+      "/nomflix/nom2.webp",
+      "/nomflix/nom3.webp",
+      "/nomflix/nom4.webp",
     ],
     siteName: "Nomflix",
     siteIntro:
@@ -165,10 +165,10 @@ export const portfolioList = [
   },
   {
     viewImg: [
-      "/richter/ri1.png",
-      "/richter/ri2.png",
-      "/richter/ri4.png",
-      "/richter/ri3.png",
+      "/richter/ri1.webp",
+      "/richter/ri2.webp",
+      "/richter/ri4.webp",
+      "/richter/ri3.webp",
     ],
     siteName: "Richter Award",
     siteIntro:
@@ -217,12 +217,12 @@ export const portfolioList = [
   },
   {
     viewImg: [
-      "/surroundio/sr1.png",
-      "/surroundio/sr2.png",
-      "/surroundio/sr3.png",
-      "/surroundio/sr5.png",
-      "/surroundio/sr4.png",
-      "/surroundio/sr6.png",
+      "/surroundio/sr1.webp",
+      "/surroundio/sr2.webp",
+      "/surroundio/sr3.webp",
+      "/surroundio/sr5.webp",
+      "/surroundio/sr4.webp",
+      "/surroundio/sr6.webp",
     ],
     siteName: "Surroundio",
     siteIntro:
