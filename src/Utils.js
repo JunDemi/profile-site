@@ -139,7 +139,7 @@ export const portfolioList = [
       "ThemeProvider (다크모드, 라이트모드 테마)",
       "실시간 변동 가격을 통해 화살표 방향 및 색상 구분",
     ],
-    link: "https://crypto-coins-lac.vercel.app/",
+    link: "https://jundemi-coin.netlify.app/",
   },
   {
     viewImg: [
