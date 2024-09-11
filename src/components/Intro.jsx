@@ -70,7 +70,7 @@ const Intro = () => {
         set_currentPage((prevValue) => (prevValue + 1) % 3);
         set_back(false);
       }
-    }, 4000);
+    }, 6000);
     return () => {
       clearInterval(intervalId);
     };

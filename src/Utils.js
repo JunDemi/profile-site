@@ -1,7 +1,7 @@
 export const introduceText = [
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti, facilis fugit quam voluptate omnis, impedit id nisi voluptas cupiditate autem numquam quo odio laudantium rerum, perferendis in excepturi nobis.",
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti, facilis fugit quam voluptate omnis, impedit id nisi voluptas cupiditate autem numquam quo odio laudantium rerum, perferendis in excepturi nobis.",
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti, facilis fugit quam voluptate omnis, impedit id nisi voluptas cupiditate autem numquam quo odio laudantium rerum, perferendis in excepturi nobis.",
+  "서비스를 제공하는 일을 함에 있어, 어떤 기술적인 측면이 사용자에게 조금이라도 만족을 할지 끊임없이 고민을 하는 개발자가 되는 것이 저의 최우선순위입니다.",
+  "새로운 기술과 도구에 대한 관심은 제 자신을 더 나은 개발자로 이끌어 주리라 믿습니다. 기술 트렌드를 주시하고, 그것들을 프로젝트에 적용시킬 수 있도록 시간을 투자합니다.",
+  "아무리 작은 사이트라도 소개하고자 하는 주제를 다양한 방면으로 사용자들에게 강렬한 인상을 심어주는것. 그것이 개발자로써 해야할 책무라고 생각합니다.",
 ];
 export const stackFront = [
   {
