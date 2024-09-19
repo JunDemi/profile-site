@@ -131,7 +131,9 @@ blockquote,
 q {
 	quotes: none;
 }
-
+img{
+	object-fit: cover;
+}
 blockquote:before,
 blockquote:after,
 q:before,

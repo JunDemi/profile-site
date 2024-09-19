@@ -109,7 +109,7 @@ export const portfolioList = [
       "/the-market/themarket7.webp",
       "/the-market/themarket8.webp",
     ],
-    siteName: "The Market",
+    siteName: "The Market Omega",
     siteIntro:
       "온라인 내 중고상품 구매/판매와 소셜 네트워크 서비스로 인한 커뮤니티 플랫폼을 제공하며 대쉬보드 차트 UI를 통해 사이트 이용자들의 활동을 알아볼 수 있는 사이트입니다.",
     stackImg: [
@@ -136,7 +136,7 @@ export const portfolioList = [
       "/maplestory/maple6.webp",
       "/maplestory/maple2.webp",
     ],
-    siteName: "MapleStory Open API",
+    siteName: "MapleWings",
     siteIntro:
       "넥슨 메이플스토리의 Open API를 활용한 길드 소개 및 캐릭터 정보를 조회하는 사이트입니다.",
     stackImg: [
