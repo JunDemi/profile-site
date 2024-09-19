@@ -487,54 +487,55 @@
                 }
             }
         }
+    }
 
-        .slide-progress-bar {
-            position: absolute;
-            z-index: 10;
-            right: 3rem;
-            top: 25%;
+    .slide-progress-bar {
+        position: absolute;
+        z-index: 10;
+        top: calc(50% + 3rem);
+        transform: translateY(-50%);
+        right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 100%;
+
+        div {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 50px;
 
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            .progress-line {
+                border: none;
+                background-color: #fff;
+                width: 2px;
+                height: 80px;
+                margin: 5px 0;
 
-                .progress-line {
-                    border: none;
-                    background-color: #fff;
-                    width: 2px;
-                    height: 30px;
-                    margin: 5px 0;
-
-                    &.number1 {
-                        display: none;
-                    }
-                }
-
-                button {
-                    cursor: pointer;
-                    background: none;
-                    border-radius: 50%;
-                    border: none;
-                    box-shadow: 2px 2px var(--color-shadow);
-                    color: #787878;
-                    background-color: #fff;
-                    width: 25px;
-                    height: 25px;
-                    font-size: 13px;
-                    transition: all .3s;
+                &.number2 {
+                    display: none;
                 }
             }
 
+            button {
+                cursor: pointer;
+                background: none;
+                border-radius: 50%;
+                border: none;
+                box-shadow: 4px 4px var(--color-shadow);
+                color: #787878;
+                background-color: #fff;
+                width: 50px;
+                height: 50px;
+                font-size: 15px;
+                transition: all .3s;
+            }
         }
-    }
 
+    }
 }
 
 .overlay-dark {

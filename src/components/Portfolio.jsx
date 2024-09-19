@@ -249,9 +249,9 @@ const Portfolio = () => {
                   style={
                     currentPage === number
                       ? {
-                          width: "50px",
-                          height: "50px",
-                          fontSize: "16px",
+                          width: "80px",
+                          height: "80px",
+                          fontSize: "20px",
                           fontFamily: "SUITE-bold"
                         }
                       : {}

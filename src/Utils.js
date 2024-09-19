@@ -70,6 +70,35 @@ export const stackBack = [
 export const portfolioList = [
   {
     viewImg: [
+      "/pickit/pickit1.webp",
+      "/pickit/pickit2.webp",
+      "/pickit/pickit3.webp",
+      "/pickit/pickit4.webp",
+      "/pickit/pickit5.webp",
+      "/pickit/pickit6.webp",
+      "/pickit/pickit7.webp",
+      "/pickit/pickit8.webp",
+    ],
+    siteName: "PICKIT",
+    siteIntro:
+      "인기 카테고리를 시각적으로 차트화한 대쉬보드와 커뮤니티 플랫폼을 제공하면서 다양한 월드컵 게임 콘텐츠를 즐길 수 있는 사이트입니다.",
+    stackImg: [
+      "https://camo.githubusercontent.com/27e34bcb27e231767f7d1671498d48181bb3ba244d3876abb15b3be2aeae6bfb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6578742e6a732031342d3030303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d6e657874646f746a73266c6f676f436f6c6f723d666666666666",
+      "https://camo.githubusercontent.com/0bd8a63ca14821421455199e86267172d5dad9860859b46feaf71b32fee86245/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d3331373843363f7374796c653d666f722d7468652d6261646765266c6f676f3d74797065736372697074266c6f676f436f6c6f723d666666666666",
+      "https://camo.githubusercontent.com/53101dab446bf07ce2ac9f8c104931e6c359650ef6716a2a5ef25388d621aaa3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f46697265626173652d4646434132383f7374796c653d666f722d7468652d6261646765266c6f676f3d6669726562617365266c6f676f436f6c6f723d303030303030",
+      "https://camo.githubusercontent.com/df54a377e08d3e0a75275e2996009b2b988c5a94f08f66c8efa0b9d33a624601/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374796c656420436f6d706f6e656e74732d4442373039333f7374796c653d666f722d7468652d6261646765266c6f676f3d7374796c6564636f6d706f6e656e7473266c6f676f436f6c6f723d666666666666",
+    ],
+    feature: [
+      "게임 데이터값을 로컬스토리지에 저장하여 새로고침 시에도 게임 상태 유지",
+      "최초 로딩 및 무한스크롤 로딩 시 스켈레톤 애니메이션 적용",
+      "최신순/인기순 필터링 및 일반 검색/카테고리 검색 구분하여 월드컵 검색 기능 구현",
+      "Redux 전역 상태 관리를 이용하여 3단계로 구성된 월드컵 생성 로직 구현",
+      "React Query와 IntersectionObserver를 활용하여 월드컵 목록 무한스크롤 구현",
+    ],
+    link: "https://web-pick-it-m0wbgqdt2b0ac209.sel4.cloudtype.app/",
+  },
+  {
+    viewImg: [
       "/the-market/themarket1.webp",
       "/the-market/themarket2.webp",
       "/the-market/themarket5.webp",
@@ -90,7 +119,7 @@ export const portfolioList = [
       "Firebase 데이터를 차트에 적용",
       "로그인, 회원가입, 프로필 수정, 상품, SNS게시물, 댓글",
       "Recoil과 Framer를 이용한 로그인/회원가입 창 변환동작",
-      "Intersection Observer & Infinite Query(무한 스크롤)",
+      "React Query와 IntersectionObserver를 활용하여 월드컵 목록 무한스크롤 구현",
     ],
     link: "https://the-market-omega.vercel.app/",
   },
