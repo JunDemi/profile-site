@@ -24,6 +24,8 @@ html[data-theme="light"] {
   --bg-cloud-0: #{url("../../public/bg/light/구름4.png")};
   --bg-cloud-1: #{url("../../public/bg/light/구름1.png")};
   --bg-cloud-2: #{url("../../public/bg/light/구름2.png")};
+
+  --clickhere: #{url("../../public/bg/light/clickhere.png")};
 }
 
 /*   다크 모드 테마   */
@@ -52,4 +54,6 @@ html[data-theme="dark"] {
   --bg-cloud-0: #{url("../../public/bg/dark/구름4.png")};
   --bg-cloud-1: #{url("../../public/bg/dark/구름1.png")};
   --bg-cloud-2: #{url("../../public/bg/dark/구름2.png")};
+
+  --clickhere: #{url("../../public/bg/dark/clickhere.png")};
 }

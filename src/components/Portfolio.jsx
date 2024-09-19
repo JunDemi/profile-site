@@ -124,6 +124,8 @@ const Portfolio = () => {
             // animate={inview ? { opacity: 1 } : { opacity: 0}}
             // transition={{ delay: 0.3, ease: "easeOut" }}
           >
+
+            <div className="click-here"></div>
             <AnimatePresence mode="sync" custom={back}>
               {portfolioList.map(
                 (data, page) =>
